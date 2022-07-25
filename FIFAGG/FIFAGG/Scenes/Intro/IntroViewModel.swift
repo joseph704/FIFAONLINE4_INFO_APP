@@ -6,15 +6,10 @@
 //
 
 import Foundation
-
+import RxSwift
 struct IntroViewModel: ViewModelType {
-    let input: Input
-    let output: Output
-    
-    init(input: Input) {
-        self.input = input
-        
-        self.output = Output()
+    func convert(from: Input, disposedBag: DisposeBag) -> Output {
+        return Output()
     }
 }
 

@@ -10,7 +10,8 @@ import RxSwift
 import UIKit
 
 class IntroViewController: UIViewController {
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
+    var viewModel: IntroViewModel?
     
     private lazy var introImageView: UIImageView = {
         let imageView = UIImageView()
@@ -33,7 +34,7 @@ private extension IntroViewController {
     func bind() {
         let input = IntroViewModel.Input()
         
-        let introViewModel = IntroViewModel(input: input)
+        let output = viewModel?.convert(from: input, disposedBag: disposeBag)
     }
     
     func setUpLayout() {
