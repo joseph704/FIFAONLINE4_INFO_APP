@@ -11,7 +11,7 @@ import RxSwift
 import Alamofire
 
 struct DefaultNetworkSessionManager: NetworkSessionManager {
-    func request(_ request: URLRequest) -> Single<(data: Data?, response: URLResponse?, requestError: Error?)> {
+    func request(_ request: URLRequest) -> Single<(data: Data?, response: HTTPURLResponse?, requestError: Error?)> {
         return Single.create { emitter in
             
             let task = AF.request(request).response { response in
