@@ -7,8 +7,35 @@
 
 import Foundation
 import RxSwift
+
+// TODO: 테스트를 위한 Import기에 지워야함
+import RealmSwift
+
 struct IntroViewModel: ViewModelType {
+    private let fetchSpidUseCase: FetchSpidUseCase
+    
+    private let disposeBag: DisposeBag = DisposeBag()
+    
+    init(fetchSpidUseCase: FetchSpidUseCase) {
+        self.fetchSpidUseCase = fetchSpidUseCase
+    }
+    
     func convert(from: Input, disposedBag: DisposeBag) -> Output {
+        fetchSpidUseCase.execute()
+            .subscribe {
+                print("성공")
+                
+                // TODO: 테스트를 위한 선수 정보 로그 찍기
+                let realmSPID = DefaultRealmStorage<SpidDTO>(configuration: Realm.Configuration())
+                realmSPID.queryAll().subscribe {
+                    print($0)
+                }
+                .disposed(by: disposedBag)
+            } onFailure: { error in
+                print(error.localizedDescription)
+            }
+            .disposed(by: disposeBag)
+
         return Output()
     }
 }

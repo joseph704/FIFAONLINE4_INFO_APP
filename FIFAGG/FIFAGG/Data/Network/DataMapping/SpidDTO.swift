@@ -10,7 +10,17 @@ import Foundation
 struct SpidDTO: Decodable {
     let id: Int
     let name: String
-    var objectID: String = ""
+    var objectID: String {
+        get {
+            return String(id)
+        }
+    }
+    
+    enum CodingKeys: CodingKey {
+        case id
+        case name
+    }
+    
 }
 
 extension SpidDTO: RealmRepresentable {
