@@ -9,10 +9,19 @@
 /* Begin PBXBuildFile section */
 		0415CCF32880143E008967F9 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415CCF22880143E008967F9 /* ViewModelType.swift */; };
 		04213A0B2869A9E600C50CFC /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04213A0A2869A9E600C50CFC /* IntroViewController.swift */; };
+		045A2F1828AB834600A0E79B /* DefaultNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A2F1728AB834600A0E79B /* DefaultNetworkService.swift */; };
+		045A2F1A28AB836A00A0E79B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A2F1928AB836A00A0E79B /* NetworkService.swift */; };
+		045A2F1C28AB841B00A0E79B /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A2F1B28AB841B00A0E79B /* EndPoint.swift */; };
+		045A2F1E28AB848100A0E79B /* ApiDataNetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A2F1D28AB848100A0E79B /* ApiDataNetworkConfig.swift */; };
 		048667FD2841FF51004E7AAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048667FC2841FF51004E7AAE /* AppDelegate.swift */; };
 		048667FF2841FF51004E7AAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048667FE2841FF51004E7AAE /* SceneDelegate.swift */; };
 		048668062841FF52004E7AAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048668052841FF52004E7AAE /* Assets.xcassets */; };
 		048668092841FF52004E7AAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048668072841FF52004E7AAE /* LaunchScreen.storyboard */; };
+		04988F6C28ACAA930013D0CF /* NetworkConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04988F6B28ACAA930013D0CF /* NetworkConfigurable.swift */; };
+		04D486ED28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D486EC28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift */; };
+		04D486EF28ABC90700EC2D7B /* NetworkSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D486EE28ABC90700EC2D7B /* NetworkSessionManager.swift */; };
+		04D486F128ABD98000EC2D7B /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D486F028ABD98000EC2D7B /* DataTransferService.swift */; };
+		04D486F328ABDAC000EC2D7B /* DefaultDataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D486F228ABDAC000EC2D7B /* DefaultDataTransferService.swift */; };
 		04DC8A37287D89A1006B7AA9 /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC8A36287D89A1006B7AA9 /* IntroViewModel.swift */; };
 		04DC8A39287D89AD006B7AA9 /* IntroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC8A38287D89AD006B7AA9 /* IntroModel.swift */; };
 		E45D6583A29175D4778E2605 /* Pods_FIFAGG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84054AE8F178BAD186DB82FD /* Pods_FIFAGG.framework */; };
@@ -21,12 +30,21 @@
 /* Begin PBXFileReference section */
 		0415CCF22880143E008967F9 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		04213A0A2869A9E600C50CFC /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		045A2F1728AB834600A0E79B /* DefaultNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkService.swift; sourceTree = "<group>"; };
+		045A2F1928AB836A00A0E79B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		045A2F1B28AB841B00A0E79B /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		045A2F1D28AB848100A0E79B /* ApiDataNetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiDataNetworkConfig.swift; sourceTree = "<group>"; };
 		048667F92841FF51004E7AAE /* FIFAGG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIFAGG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048667FC2841FF51004E7AAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		048667FE2841FF51004E7AAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		048668052841FF52004E7AAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048668082841FF52004E7AAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0486680A2841FF52004E7AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04988F6B28ACAA930013D0CF /* NetworkConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigurable.swift; sourceTree = "<group>"; };
+		04D486EC28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkSessionManager.swift; sourceTree = "<group>"; };
+		04D486EE28ABC90700EC2D7B /* NetworkSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionManager.swift; sourceTree = "<group>"; };
+		04D486F028ABD98000EC2D7B /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
+		04D486F228ABDAC000EC2D7B /* DefaultDataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDataTransferService.swift; sourceTree = "<group>"; };
 		04DC8A36287D89A1006B7AA9 /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
 		04DC8A38287D89AD006B7AA9 /* IntroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroModel.swift; sourceTree = "<group>"; };
 		818B3EE41BB674EA2EEE5E86 /* Pods-FIFAGG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIFAGG.debug.xcconfig"; path = "Target Support Files/Pods-FIFAGG/Pods-FIFAGG.debug.xcconfig"; sourceTree = "<group>"; };
@@ -57,6 +75,7 @@
 		04213A0D2869AA0C00C50CFC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0415CCF428801442008967F9 /* Protocol */,
 				04213A0F2869AA4C00C50CFC /* Intro */,
 				04213A102869AA5E00C50CFC /* Login */,
 			);
@@ -78,6 +97,38 @@
 			children = (
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		04349B9328A54F09002A675C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				04D486F028ABD98000EC2D7B /* DataTransferService.swift */,
+				045A2F1928AB836A00A0E79B /* NetworkService.swift */,
+				04D486EE28ABC90700EC2D7B /* NetworkSessionManager.swift */,
+				04988F6B28ACAA930013D0CF /* NetworkConfigurable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		04507D0928A257F800B29190 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04CB4E4A28AB32B200D7B379 /* Entity */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04507D0E28A25C2700B29190 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				04349B9328A54F09002A675C /* Protocol */,
+				04D486F228ABDAC000EC2D7B /* DefaultDataTransferService.swift */,
+				045A2F1728AB834600A0E79B /* DefaultNetworkService.swift */,
+				04D486EC28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift */,
+				045A2F1D28AB848100A0E79B /* ApiDataNetworkConfig.swift */,
+				045A2F1B28AB841B00A0E79B /* EndPoint.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		048667F02841FF51004E7AAE = {
@@ -103,13 +154,53 @@
 			children = (
 				048667FC2841FF51004E7AAE /* AppDelegate.swift */,
 				048667FE2841FF51004E7AAE /* SceneDelegate.swift */,
+				04CB4E4628AB31D100D7B379 /* Data */,
+				04507D0E28A25C2700B29190 /* Network */,
+				04507D0928A257F800B29190 /* Models */,
+				04213A0D2869AA0C00C50CFC /* Scenes */,
 				048668052841FF52004E7AAE /* Assets.xcassets */,
 				048668072841FF52004E7AAE /* LaunchScreen.storyboard */,
 				0486680A2841FF52004E7AAE /* Info.plist */,
-				0415CCF428801442008967F9 /* Protocol */,
-				04213A0D2869AA0C00C50CFC /* Scenes */,
 			);
 			path = FIFAGG;
+			sourceTree = "<group>";
+		};
+		04CB4E4628AB31D100D7B379 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				04CB4E4928AB320F00D7B379 /* Repositories */,
+				04CB4E4828AB31EC00D7B379 /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		04CB4E4728AB31DC00D7B379 /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		04CB4E4828AB31EC00D7B379 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				04CB4E4728AB31DC00D7B379 /* DataMapping */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		04CB4E4928AB320F00D7B379 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		04CB4E4A28AB32B200D7B379 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		201121FCB75B15369A850451 /* Pods */ = {
@@ -243,12 +334,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045A2F1E28AB848100A0E79B /* ApiDataNetworkConfig.swift in Sources */,
+				045A2F1C28AB841B00A0E79B /* EndPoint.swift in Sources */,
+				045A2F1828AB834600A0E79B /* DefaultNetworkService.swift in Sources */,
 				04213A0B2869A9E600C50CFC /* IntroViewController.swift in Sources */,
+				04D486F328ABDAC000EC2D7B /* DefaultDataTransferService.swift in Sources */,
 				04DC8A39287D89AD006B7AA9 /* IntroModel.swift in Sources */,
 				0415CCF32880143E008967F9 /* ViewModelType.swift in Sources */,
 				048667FD2841FF51004E7AAE /* AppDelegate.swift in Sources */,
+				04988F6C28ACAA930013D0CF /* NetworkConfigurable.swift in Sources */,
 				048667FF2841FF51004E7AAE /* SceneDelegate.swift in Sources */,
+				04D486ED28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift in Sources */,
+				045A2F1A28AB836A00A0E79B /* NetworkService.swift in Sources */,
 				04DC8A37287D89A1006B7AA9 /* IntroViewModel.swift in Sources */,
+				04D486EF28ABC90700EC2D7B /* NetworkSessionManager.swift in Sources */,
+				04D486F128ABD98000EC2D7B /* DataTransferService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +490,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B434W34DLF;
+				DEVELOPMENT_TEAM = BAT7Y9H9TP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FIFAGG/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -418,7 +518,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B434W34DLF;
+				DEVELOPMENT_TEAM = BAT7Y9H9TP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FIFAGG/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
