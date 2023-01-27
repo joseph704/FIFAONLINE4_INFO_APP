@@ -163,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				04F4A31928D2BAFE0000FC61 /* Coordinator */,
-				04F4A31B28D2BB230000FC61 /* DefaultIntroCoordinator.swift */,
 				04A3988528D9A5BA007D93B7 /* ViewController */,
 				04A3988628D9A5C2007D93B7 /* ViewModel */,
 			);
@@ -395,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				04F4A31A28D2BB130000FC61 /* Protocol */,
+				04F4A31B28D2BB230000FC61 /* DefaultIntroCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
