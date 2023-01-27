@@ -12,4 +12,5 @@ import RxSwift
 public protocol DataTransferService {
     func request<T: Decodable, E: ResponseRequestable>(with endpoint: E) -> Single<T> where E.Response == T
     func request<E: ResponseRequestable>(with endpoint: E) -> Single<Void> where E.Response == Void
+    func request<T: Decodable, E: ResponseRequestable>(with endpoint: E) -> Single<(responseDTO: T, responseEtag: String?)> where E.Response == T // etag와 함께 response값 전달
 }

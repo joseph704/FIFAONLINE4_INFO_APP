@@ -47,7 +47,7 @@ extension DefaultDataTransferService: DataTransferService {
         return self.networkService.request(endPoint: endpoint)
             .flatMap { networkResult in
                 switch networkResult {
-                case .success(let data):
+                case .success(let data, _):
                     let result: Single<T> = self.decode(data: data, decoder: endpoint.responseDecoder)
                     return result
                 case .failure(let networkError):
@@ -62,7 +62,7 @@ extension DefaultDataTransferService: DataTransferService {
         let result: Single<Void> = self.networkService.request(endPoint: endpoint)
             .flatMap { networkResult in
                 switch networkResult {
-                case .success(_):
+                case .success(_, _):
                     return Single.just(())
                 case .failure(let networkError):
                     self.errorLogger.log(error: networkError)
@@ -71,6 +71,21 @@ extension DefaultDataTransferService: DataTransferService {
                 }
             }
         return result
+    }
+    
+    func request<T: Decodable, E: ResponseRequestable>(with endpoint: E) -> Single<(responseDTO: T, responseEtag: String?)> where E.Response == T {
+        return self.networkService.request(endPoint: endpoint)
+            .flatMap { networkResult in
+                switch networkResult {
+                case .success(let data, let etag):
+                    let result: Single<T> = self.decode(data: data, decoder: endpoint.responseDecoder)
+                    return result.map { ($0, etag) }
+                case .failure(let networkError):
+                    self.errorLogger.log(error: networkError)
+                    let error = self.resolve(networkError: networkError)
+                    return Single<T>.error(error).map { ($0, nil) }
+                }
+            }
     }
     
     // MARK: - Private

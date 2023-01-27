@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0415CCF32880143E008967F9 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415CCF22880143E008967F9 /* ViewModelType.swift */; };
 		04213A0B2869A9E600C50CFC /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04213A0A2869A9E600C50CFC /* IntroViewController.swift */; };
+		043181B628BFAE87000A81C5 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043181B528BFAE87000A81C5 /* APIEndpoints.swift */; };
 		045A2F1828AB834600A0E79B /* DefaultNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A2F1728AB834600A0E79B /* DefaultNetworkService.swift */; };
 		045A2F1A28AB836A00A0E79B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A2F1928AB836A00A0E79B /* NetworkService.swift */; };
 		045A2F1C28AB841B00A0E79B /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A2F1B28AB841B00A0E79B /* EndPoint.swift */; };
@@ -17,21 +18,31 @@
 		048667FF2841FF51004E7AAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048667FE2841FF51004E7AAE /* SceneDelegate.swift */; };
 		048668062841FF52004E7AAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048668052841FF52004E7AAE /* Assets.xcassets */; };
 		048668092841FF52004E7AAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048668072841FF52004E7AAE /* LaunchScreen.storyboard */; };
+		048B782428C24CBD00A33B94 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B782328C24CBD00A33B94 /* UserDefaultsKey.swift */; };
 		04988F6C28ACAA930013D0CF /* NetworkConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04988F6B28ACAA930013D0CF /* NetworkConfigurable.swift */; };
 		04988F7D28ACEFFA0013D0CF /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 04988F7C28ACEFF90013D0CF /* Realm */; };
 		04988F7F28ACEFFA0013D0CF /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 04988F7E28ACEFFA0013D0CF /* RealmSwift */; };
+		04988F8128ADD2110013D0CF /* DefaultMetaInfoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04988F8028ADD2110013D0CF /* DefaultMetaInfoRepository.swift */; };
+		04988F8328ADD3DD0013D0CF /* MetaInfoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04988F8228ADD3DD0013D0CF /* MetaInfoRepository.swift */; };
+		04A3987D28D998CA007D93B7 /* CoordinatorFinishDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3987C28D998CA007D93B7 /* CoordinatorFinishDelegate.swift */; };
+		04A3988028D99924007D93B7 /* DefaultAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3987F28D99924007D93B7 /* DefaultAppCoordinator.swift */; };
+		04A3988428D99E06007D93B7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3988328D99E06007D93B7 /* AppCoordinator.swift */; };
 		04D486ED28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D486EC28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift */; };
 		04D486EF28ABC90700EC2D7B /* NetworkSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D486EE28ABC90700EC2D7B /* NetworkSessionManager.swift */; };
 		04D486F128ABD98000EC2D7B /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D486F028ABD98000EC2D7B /* DataTransferService.swift */; };
 		04D486F328ABDAC000EC2D7B /* DefaultDataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D486F228ABDAC000EC2D7B /* DefaultDataTransferService.swift */; };
 		04DC8A37287D89A1006B7AA9 /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC8A36287D89A1006B7AA9 /* IntroViewModel.swift */; };
-		04DC8A39287D89AD006B7AA9 /* IntroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC8A38287D89AD006B7AA9 /* IntroModel.swift */; };
+		04F4A31828D2BAFA0000FC61 /* IntroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4A31728D2BAFA0000FC61 /* IntroCoordinator.swift */; };
+		04F4A31C28D2BB230000FC61 /* DefaultIntroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4A31B28D2BB230000FC61 /* DefaultIntroCoordinator.swift */; };
+		04F4A32028D2BD7A0000FC61 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4A31F28D2BD7A0000FC61 /* Coordinator.swift */; };
+		04FEEAB428C8EE6100BF005E /* Spid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FEEAB328C8EE6100BF005E /* Spid.swift */; };
 		E45D6583A29175D4778E2605 /* Pods_FIFAGG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84054AE8F178BAD186DB82FD /* Pods_FIFAGG.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0415CCF22880143E008967F9 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		04213A0A2869A9E600C50CFC /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		043181B528BFAE87000A81C5 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		045A2F1728AB834600A0E79B /* DefaultNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkService.swift; sourceTree = "<group>"; };
 		045A2F1928AB836A00A0E79B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		045A2F1B28AB841B00A0E79B /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
@@ -42,13 +53,22 @@
 		048668052841FF52004E7AAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048668082841FF52004E7AAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0486680A2841FF52004E7AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		048B782328C24CBD00A33B94 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		04988F6B28ACAA930013D0CF /* NetworkConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigurable.swift; sourceTree = "<group>"; };
+		04988F8028ADD2110013D0CF /* DefaultMetaInfoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMetaInfoRepository.swift; sourceTree = "<group>"; };
+		04988F8228ADD3DD0013D0CF /* MetaInfoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaInfoRepository.swift; sourceTree = "<group>"; };
+		04A3987C28D998CA007D93B7 /* CoordinatorFinishDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFinishDelegate.swift; sourceTree = "<group>"; };
+		04A3987F28D99924007D93B7 /* DefaultAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAppCoordinator.swift; sourceTree = "<group>"; };
+		04A3988328D99E06007D93B7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		04D486EC28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkSessionManager.swift; sourceTree = "<group>"; };
 		04D486EE28ABC90700EC2D7B /* NetworkSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionManager.swift; sourceTree = "<group>"; };
 		04D486F028ABD98000EC2D7B /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 		04D486F228ABDAC000EC2D7B /* DefaultDataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDataTransferService.swift; sourceTree = "<group>"; };
 		04DC8A36287D89A1006B7AA9 /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
-		04DC8A38287D89AD006B7AA9 /* IntroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroModel.swift; sourceTree = "<group>"; };
+		04F4A31728D2BAFA0000FC61 /* IntroCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCoordinator.swift; sourceTree = "<group>"; };
+		04F4A31B28D2BB230000FC61 /* DefaultIntroCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultIntroCoordinator.swift; sourceTree = "<group>"; };
+		04F4A31F28D2BD7A0000FC61 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		04FEEAB328C8EE6100BF005E /* Spid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spid.swift; sourceTree = "<group>"; };
 		818B3EE41BB674EA2EEE5E86 /* Pods-FIFAGG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIFAGG.debug.xcconfig"; path = "Target Support Files/Pods-FIFAGG/Pods-FIFAGG.debug.xcconfig"; sourceTree = "<group>"; };
 		84054AE8F178BAD186DB82FD /* Pods_FIFAGG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIFAGG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91CB6F709F7EFF08A4C2B5E1 /* Pods-FIFAGG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIFAGG.release.xcconfig"; path = "Target Support Files/Pods-FIFAGG/Pods-FIFAGG.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,31 +96,32 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		04213A0D2869AA0C00C50CFC /* Scenes */ = {
+		04213A0D2869AA0C00C50CFC /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				0415CCF428801442008967F9 /* Protocol */,
-				04213A0F2869AA4C00C50CFC /* Intro */,
-				04213A102869AA5E00C50CFC /* Login */,
+				04F4A31E28D2BBF30000FC61 /* Common */,
+				04213A0F2869AA4C00C50CFC /* IntroScene */,
 			);
-			path = Scenes;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
-		04213A0F2869AA4C00C50CFC /* Intro */ = {
+		04213A0F2869AA4C00C50CFC /* IntroScene */ = {
 			isa = PBXGroup;
 			children = (
-				04213A0A2869A9E600C50CFC /* IntroViewController.swift */,
-				04DC8A36287D89A1006B7AA9 /* IntroViewModel.swift */,
-				04DC8A38287D89AD006B7AA9 /* IntroModel.swift */,
+				04F4A31928D2BAFE0000FC61 /* Coordinator */,
+				04F4A31B28D2BB230000FC61 /* DefaultIntroCoordinator.swift */,
+				04A3988528D9A5BA007D93B7 /* ViewController */,
+				04A3988628D9A5C2007D93B7 /* ViewModel */,
 			);
-			path = Intro;
+			path = IntroScene;
 			sourceTree = "<group>";
 		};
-		04213A102869AA5E00C50CFC /* Login */ = {
+		043181B428BFAD59000A81C5 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				048B782328C24CBD00A33B94 /* UserDefaultsKey.swift */,
 			);
-			path = Login;
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		04349B9328A54F09002A675C /* Protocol */ = {
@@ -114,15 +135,15 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		04507D0928A257F800B29190 /* Models */ = {
+		04507D0E28A25C2700B29190 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				04CB4E4A28AB32B200D7B379 /* Entity */,
+				047D2AA828BDD06000796514 /* Network */,
 			);
-			path = Models;
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
-		04507D0E28A25C2700B29190 /* Network */ = {
+		047D2AA828BDD06000796514 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				04349B9328A54F09002A675C /* Protocol */,
@@ -156,17 +177,82 @@
 		048667FB2841FF51004E7AAE /* FIFAGG */ = {
 			isa = PBXGroup;
 			children = (
+				04A7BAD728C8654E00159C1B /* Application */,
+				043181B428BFAD59000A81C5 /* Constant */,
+				04A3988728D9A90F007D93B7 /* Domain */,
+				04213A0D2869AA0C00C50CFC /* Presentation */,
+				04CB4E4628AB31D100D7B379 /* Data */,
+				04507D0E28A25C2700B29190 /* Infrastructure */,
+				04A7BAD828C86B0D00159C1B /* Resources */,
+			);
+			path = FIFAGG;
+			sourceTree = "<group>";
+		};
+		04988F8428ADD3E40013D0CF /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				04988F8228ADD3DD0013D0CF /* MetaInfoRepository.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		04A3987B28D99893007D93B7 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				04F4A31F28D2BD7A0000FC61 /* Coordinator.swift */,
+				04A3988328D99E06007D93B7 /* AppCoordinator.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		04A3987E28D998FF007D93B7 /* Delegation */ = {
+			isa = PBXGroup;
+			children = (
+				04A3987C28D998CA007D93B7 /* CoordinatorFinishDelegate.swift */,
+			);
+			path = Delegation;
+			sourceTree = "<group>";
+		};
+		04A3988528D9A5BA007D93B7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04213A0A2869A9E600C50CFC /* IntroViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		04A3988628D9A5C2007D93B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04DC8A36287D89A1006B7AA9 /* IntroViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04A3988728D9A90F007D93B7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		04A7BAD728C8654E00159C1B /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				048667FC2841FF51004E7AAE /* AppDelegate.swift */,
 				048667FE2841FF51004E7AAE /* SceneDelegate.swift */,
-				04CB4E4628AB31D100D7B379 /* Data */,
-				04507D0E28A25C2700B29190 /* Network */,
-				04507D0928A257F800B29190 /* Models */,
-				04213A0D2869AA0C00C50CFC /* Scenes */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		04A7BAD828C86B0D00159C1B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				048668052841FF52004E7AAE /* Assets.xcassets */,
 				048668072841FF52004E7AAE /* LaunchScreen.storyboard */,
 				0486680A2841FF52004E7AAE /* Info.plist */,
 			);
-			path = FIFAGG;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		04CB4E4628AB31D100D7B379 /* Data */ = {
@@ -178,17 +264,11 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		04CB4E4728AB31DC00D7B379 /* DataMapping */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataMapping;
-			sourceTree = "<group>";
-		};
 		04CB4E4828AB31EC00D7B379 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				04CB4E4728AB31DC00D7B379 /* DataMapping */,
+				043181B528BFAE87000A81C5 /* APIEndpoints.swift */,
+				04FEEAB528C8EE6600BF005E /* DataMapping */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -196,15 +276,61 @@
 		04CB4E4928AB320F00D7B379 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				04988F8428ADD3E40013D0CF /* Protocol */,
+				04988F8028ADD2110013D0CF /* DefaultMetaInfoRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
 		};
-		04CB4E4A28AB32B200D7B379 /* Entity */ = {
+		04F4A31928D2BAFE0000FC61 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				04F4A31A28D2BB130000FC61 /* Protocol */,
 			);
-			path = Entity;
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		04F4A31A28D2BB130000FC61 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				04F4A31728D2BAFA0000FC61 /* IntroCoordinator.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		04F4A31D28D2BBEA0000FC61 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0415CCF428801442008967F9 /* Protocol */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04F4A31E28D2BBF30000FC61 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				04F4A31D28D2BBEA0000FC61 /* ViewModel */,
+				04F4A32128D2BE910000FC61 /* Coordinator */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		04F4A32128D2BE910000FC61 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				04A3987F28D99924007D93B7 /* DefaultAppCoordinator.swift */,
+				04A3987B28D99893007D93B7 /* Protocol */,
+				04A3987E28D998FF007D93B7 /* Delegation */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		04FEEAB528C8EE6600BF005E /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				04FEEAB328C8EE6100BF005E /* Spid.swift */,
+			);
+			path = DataMapping;
 			sourceTree = "<group>";
 		};
 		201121FCB75B15369A850451 /* Pods */ = {
@@ -347,19 +473,29 @@
 			files = (
 				045A2F1E28AB848100A0E79B /* ApiDataNetworkConfig.swift in Sources */,
 				045A2F1C28AB841B00A0E79B /* EndPoint.swift in Sources */,
+				04A3988428D99E06007D93B7 /* AppCoordinator.swift in Sources */,
+				04A3987D28D998CA007D93B7 /* CoordinatorFinishDelegate.swift in Sources */,
+				04988F8128ADD2110013D0CF /* DefaultMetaInfoRepository.swift in Sources */,
+				048B782428C24CBD00A33B94 /* UserDefaultsKey.swift in Sources */,
 				045A2F1828AB834600A0E79B /* DefaultNetworkService.swift in Sources */,
 				04213A0B2869A9E600C50CFC /* IntroViewController.swift in Sources */,
 				04D486F328ABDAC000EC2D7B /* DefaultDataTransferService.swift in Sources */,
-				04DC8A39287D89AD006B7AA9 /* IntroModel.swift in Sources */,
 				0415CCF32880143E008967F9 /* ViewModelType.swift in Sources */,
+				04F4A31C28D2BB230000FC61 /* DefaultIntroCoordinator.swift in Sources */,
 				048667FD2841FF51004E7AAE /* AppDelegate.swift in Sources */,
 				04988F6C28ACAA930013D0CF /* NetworkConfigurable.swift in Sources */,
+				043181B628BFAE87000A81C5 /* APIEndpoints.swift in Sources */,
 				048667FF2841FF51004E7AAE /* SceneDelegate.swift in Sources */,
+				04A3988028D99924007D93B7 /* DefaultAppCoordinator.swift in Sources */,
+				04FEEAB428C8EE6100BF005E /* Spid.swift in Sources */,
+				04988F8328ADD3DD0013D0CF /* MetaInfoRepository.swift in Sources */,
 				04D486ED28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift in Sources */,
+				04F4A32028D2BD7A0000FC61 /* Coordinator.swift in Sources */,
 				045A2F1A28AB836A00A0E79B /* NetworkService.swift in Sources */,
 				04DC8A37287D89A1006B7AA9 /* IntroViewModel.swift in Sources */,
 				04D486EF28ABC90700EC2D7B /* NetworkSessionManager.swift in Sources */,
 				04D486F128ABD98000EC2D7B /* DataTransferService.swift in Sources */,
+				04F4A31828D2BAFA0000FC61 /* IntroCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,7 +639,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BAT7Y9H9TP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FIFAGG/Info.plist;
+				INFOPLIST_FILE = FIFAGG/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -531,7 +667,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BAT7Y9H9TP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FIFAGG/Info.plist;
+				INFOPLIST_FILE = FIFAGG/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

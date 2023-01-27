@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 public protocol NetworkSessionManager {
-    func request(_ request: URLRequest) -> Single<(data: Data?, response: URLResponse?, requestError: Error?)>
+    func request(_ request: URLRequest) -> Single<(data: Data?, response: HTTPURLResponse?, requestError: Error?)>
 }
