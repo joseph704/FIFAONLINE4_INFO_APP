@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0413455B28E2A9D70077D123 /* RMSpid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413455A28E2A9D70077D123 /* RMSpid.swift */; };
+		0413455F28E2B6170077D123 /* Realm+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413455E28E2B6170077D123 /* Realm+Extension.swift */; };
+		0413456628E2C9CA0077D123 /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413456528E2C9CA0077D123 /* RealmRepresentable.swift */; };
 		0415CCF32880143E008967F9 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415CCF22880143E008967F9 /* ViewModelType.swift */; };
 		04213A0B2869A9E600C50CFC /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04213A0A2869A9E600C50CFC /* IntroViewController.swift */; };
 		043181B628BFAE87000A81C5 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043181B528BFAE87000A81C5 /* APIEndpoints.swift */; };
+		044532EB28E273BB00C0B08F /* RealmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044532EA28E273BB00C0B08F /* RealmStorage.swift */; };
+		044532ED28E273C400C0B08F /* DefaultRealmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044532EC28E273C400C0B08F /* DefaultRealmStorage.swift */; };
+		044E9F3428E6ED9A003461FB /* Observable+Extesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E9F3328E6ED9A003461FB /* Observable+Extesion.swift */; };
+		044E9F3628E6EDD7003461FB /* RealmResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E9F3528E6EDD7003461FB /* RealmResponseType.swift */; };
 		045A2F1828AB834600A0E79B /* DefaultNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A2F1728AB834600A0E79B /* DefaultNetworkService.swift */; };
 		045A2F1A28AB836A00A0E79B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A2F1928AB836A00A0E79B /* NetworkService.swift */; };
 		045A2F1C28AB841B00A0E79B /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A2F1B28AB841B00A0E79B /* EndPoint.swift */; };
@@ -27,6 +34,7 @@
 		04A3987D28D998CA007D93B7 /* CoordinatorFinishDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3987C28D998CA007D93B7 /* CoordinatorFinishDelegate.swift */; };
 		04A3988028D99924007D93B7 /* DefaultAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3987F28D99924007D93B7 /* DefaultAppCoordinator.swift */; };
 		04A3988428D99E06007D93B7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3988328D99E06007D93B7 /* AppCoordinator.swift */; };
+		04C3283928EC8210006A47D7 /* RxRealm in Frameworks */ = {isa = PBXBuildFile; productRef = 04C3283828EC8210006A47D7 /* RxRealm */; };
 		04D486ED28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D486EC28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift */; };
 		04D486EF28ABC90700EC2D7B /* NetworkSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D486EE28ABC90700EC2D7B /* NetworkSessionManager.swift */; };
 		04D486F128ABD98000EC2D7B /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D486F028ABD98000EC2D7B /* DataTransferService.swift */; };
@@ -35,14 +43,21 @@
 		04F4A31828D2BAFA0000FC61 /* IntroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4A31728D2BAFA0000FC61 /* IntroCoordinator.swift */; };
 		04F4A31C28D2BB230000FC61 /* DefaultIntroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4A31B28D2BB230000FC61 /* DefaultIntroCoordinator.swift */; };
 		04F4A32028D2BD7A0000FC61 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4A31F28D2BD7A0000FC61 /* Coordinator.swift */; };
-		04FEEAB428C8EE6100BF005E /* Spid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FEEAB328C8EE6100BF005E /* Spid.swift */; };
+		04FEEAB428C8EE6100BF005E /* SpidDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FEEAB328C8EE6100BF005E /* SpidDTO.swift */; };
 		E45D6583A29175D4778E2605 /* Pods_FIFAGG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84054AE8F178BAD186DB82FD /* Pods_FIFAGG.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0413455A28E2A9D70077D123 /* RMSpid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSpid.swift; sourceTree = "<group>"; };
+		0413455E28E2B6170077D123 /* Realm+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Extension.swift"; sourceTree = "<group>"; };
+		0413456528E2C9CA0077D123 /* RealmRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
 		0415CCF22880143E008967F9 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		04213A0A2869A9E600C50CFC /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		043181B528BFAE87000A81C5 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		044532EA28E273BB00C0B08F /* RealmStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorage.swift; sourceTree = "<group>"; };
+		044532EC28E273C400C0B08F /* DefaultRealmStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRealmStorage.swift; sourceTree = "<group>"; };
+		044E9F3328E6ED9A003461FB /* Observable+Extesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Extesion.swift"; sourceTree = "<group>"; };
+		044E9F3528E6EDD7003461FB /* RealmResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmResponseType.swift; sourceTree = "<group>"; };
 		045A2F1728AB834600A0E79B /* DefaultNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkService.swift; sourceTree = "<group>"; };
 		045A2F1928AB836A00A0E79B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		045A2F1B28AB841B00A0E79B /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
@@ -68,7 +83,7 @@
 		04F4A31728D2BAFA0000FC61 /* IntroCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCoordinator.swift; sourceTree = "<group>"; };
 		04F4A31B28D2BB230000FC61 /* DefaultIntroCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultIntroCoordinator.swift; sourceTree = "<group>"; };
 		04F4A31F28D2BD7A0000FC61 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		04FEEAB328C8EE6100BF005E /* Spid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spid.swift; sourceTree = "<group>"; };
+		04FEEAB328C8EE6100BF005E /* SpidDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpidDTO.swift; sourceTree = "<group>"; };
 		818B3EE41BB674EA2EEE5E86 /* Pods-FIFAGG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIFAGG.debug.xcconfig"; path = "Target Support Files/Pods-FIFAGG/Pods-FIFAGG.debug.xcconfig"; sourceTree = "<group>"; };
 		84054AE8F178BAD186DB82FD /* Pods_FIFAGG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIFAGG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91CB6F709F7EFF08A4C2B5E1 /* Pods-FIFAGG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIFAGG.release.xcconfig"; path = "Target Support Files/Pods-FIFAGG/Pods-FIFAGG.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +96,7 @@
 			files = (
 				04988F7F28ACEFFA0013D0CF /* RealmSwift in Frameworks */,
 				04988F7D28ACEFFA0013D0CF /* Realm in Frameworks */,
+				04C3283928EC8210006A47D7 /* RxRealm in Frameworks */,
 				E45D6583A29175D4778E2605 /* Pods_FIFAGG.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +104,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0413455C28E2B3200077D123 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				043181B428BFAD59000A81C5 /* Constant */,
+				0413455D28E2B3260077D123 /* Extension */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		0413455D28E2B3260077D123 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0413455E28E2B6170077D123 /* Realm+Extension.swift */,
+				044E9F3328E6ED9A003461FB /* Observable+Extesion.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		0413456228E2B74B0077D123 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		0413456728E2C9F40077D123 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				0413456528E2C9CA0077D123 /* RealmRepresentable.swift */,
+				044E9F3528E6EDD7003461FB /* RealmResponseType.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		0415CCF428801442008967F9 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +185,33 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		044532E628E2726200C0B08F /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				044532E928E273B200C0B08F /* Protocol */,
+				044532EC28E273C400C0B08F /* DefaultRealmStorage.swift */,
+				044532EE28E2770A00C0B08F /* DataMapping */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		044532E928E273B200C0B08F /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				044532EA28E273BB00C0B08F /* RealmStorage.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		044532EE28E2770A00C0B08F /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				0413456728E2C9F40077D123 /* Protocol */,
+				0413455A28E2A9D70077D123 /* RMSpid.swift */,
+			);
+			path = DataMapping;
+			sourceTree = "<group>";
+		};
 		04507D0E28A25C2700B29190 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,7 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				04A7BAD728C8654E00159C1B /* Application */,
-				043181B428BFAD59000A81C5 /* Constant */,
+				0413455C28E2B3200077D123 /* Utility */,
 				04A3988728D9A90F007D93B7 /* Domain */,
 				04213A0D2869AA0C00C50CFC /* Presentation */,
 				04CB4E4628AB31D100D7B379 /* Data */,
@@ -232,6 +309,7 @@
 		04A3988728D9A90F007D93B7 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				0413456228E2B74B0077D123 /* Entity */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -260,6 +338,7 @@
 			children = (
 				04CB4E4928AB320F00D7B379 /* Repositories */,
 				04CB4E4828AB31EC00D7B379 /* Network */,
+				04D0028328E1942400CB32A3 /* PersistentStorages */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -280,6 +359,14 @@
 				04988F8028ADD2110013D0CF /* DefaultMetaInfoRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		04D0028328E1942400CB32A3 /* PersistentStorages */ = {
+			isa = PBXGroup;
+			children = (
+				044532E628E2726200C0B08F /* Realm */,
+			);
+			path = PersistentStorages;
 			sourceTree = "<group>";
 		};
 		04F4A31928D2BAFE0000FC61 /* Coordinator */ = {
@@ -328,7 +415,7 @@
 		04FEEAB528C8EE6600BF005E /* DataMapping */ = {
 			isa = PBXGroup;
 			children = (
-				04FEEAB328C8EE6100BF005E /* Spid.swift */,
+				04FEEAB328C8EE6100BF005E /* SpidDTO.swift */,
 			);
 			path = DataMapping;
 			sourceTree = "<group>";
@@ -371,6 +458,7 @@
 			packageProductDependencies = (
 				04988F7C28ACEFF90013D0CF /* Realm */,
 				04988F7E28ACEFFA0013D0CF /* RealmSwift */,
+				04C3283828EC8210006A47D7 /* RxRealm */,
 			);
 			productName = FIFAGG;
 			productReference = 048667F92841FF51004E7AAE /* FIFAGG.app */;
@@ -402,6 +490,7 @@
 			mainGroup = 048667F02841FF51004E7AAE;
 			packageReferences = (
 				04988F7B28ACEFF90013D0CF /* XCRemoteSwiftPackageReference "realm-swift" */,
+				04C3283728EC8210006A47D7 /* XCRemoteSwiftPackageReference "RxRealm" */,
 			);
 			productRefGroup = 048667FA2841FF51004E7AAE /* Products */;
 			projectDirPath = "";
@@ -484,17 +573,24 @@
 				04F4A31C28D2BB230000FC61 /* DefaultIntroCoordinator.swift in Sources */,
 				048667FD2841FF51004E7AAE /* AppDelegate.swift in Sources */,
 				04988F6C28ACAA930013D0CF /* NetworkConfigurable.swift in Sources */,
+				044E9F3428E6ED9A003461FB /* Observable+Extesion.swift in Sources */,
 				043181B628BFAE87000A81C5 /* APIEndpoints.swift in Sources */,
 				048667FF2841FF51004E7AAE /* SceneDelegate.swift in Sources */,
 				04A3988028D99924007D93B7 /* DefaultAppCoordinator.swift in Sources */,
-				04FEEAB428C8EE6100BF005E /* Spid.swift in Sources */,
+				044532ED28E273C400C0B08F /* DefaultRealmStorage.swift in Sources */,
+				04FEEAB428C8EE6100BF005E /* SpidDTO.swift in Sources */,
+				0413455B28E2A9D70077D123 /* RMSpid.swift in Sources */,
+				044E9F3628E6EDD7003461FB /* RealmResponseType.swift in Sources */,
 				04988F8328ADD3DD0013D0CF /* MetaInfoRepository.swift in Sources */,
 				04D486ED28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift in Sources */,
+				0413455F28E2B6170077D123 /* Realm+Extension.swift in Sources */,
+				044532EB28E273BB00C0B08F /* RealmStorage.swift in Sources */,
 				04F4A32028D2BD7A0000FC61 /* Coordinator.swift in Sources */,
 				045A2F1A28AB836A00A0E79B /* NetworkService.swift in Sources */,
 				04DC8A37287D89A1006B7AA9 /* IntroViewModel.swift in Sources */,
 				04D486EF28ABC90700EC2D7B /* NetworkSessionManager.swift in Sources */,
 				04D486F128ABD98000EC2D7B /* DataTransferService.swift in Sources */,
+				0413456628E2C9CA0077D123 /* RealmRepresentable.swift in Sources */,
 				04F4A31828D2BAFA0000FC61 /* IntroCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -717,6 +813,14 @@
 				kind = branch;
 			};
 		};
+		04C3283728EC8210006A47D7 /* XCRemoteSwiftPackageReference "RxRealm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxRealm";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -729,6 +833,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 04988F7B28ACEFF90013D0CF /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		04C3283828EC8210006A47D7 /* RxRealm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04C3283728EC8210006A47D7 /* XCRemoteSwiftPackageReference "RxRealm" */;
+			productName = RxRealm;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
