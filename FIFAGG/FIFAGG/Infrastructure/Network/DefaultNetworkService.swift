@@ -11,7 +11,7 @@ import RxSwift
 import Alamofire
 
 public enum NetworkResult {
-    case success(Data?)
+    case success(data: Data?, etag: String?)
     case failure(NetworkError)
 }
 
@@ -26,6 +26,7 @@ public enum NetworkError: Int, Error, CustomStringConvertible {
     case notConnectedToInternet
     case cancelled
     case urlGeneration
+    case notModified = 304
     case invalidRequestError = 400
     case authenticationError = 401
     case forbiddenError = 403
@@ -57,6 +58,7 @@ public enum NetworkError: Int, Error, CustomStringConvertible {
         case .notConnectedToInternet: return "NOT_CONNECTED_TO_INTERNET"
         case .cancelled: return "CANCELLED"
         case .urlGeneration: return "URLGeneration"
+        case .notModified: return "304:NOT_MODIFIED"
         }
     }
 }
@@ -86,19 +88,34 @@ struct DefaultNetworkService {
         
         return sessionManager.request(request)
             .map { sessionDataDaskresult -> NetworkResult in
+                var error: NetworkError
                 if let requestError = sessionDataDaskresult.requestError {
-                    var error: NetworkError
-                    if let response = sessionDataDaskresult.response as? HTTPURLResponse {
+                    if let response = sessionDataDaskresult.response {
                         error = NetworkError(rawValue: response.statusCode) ?? .unknownError
                     } else {
                         error = self.resolve(error: requestError)
                     }
-                    
                     self.logger.log(error: error)
                     return .failure(error)
                 } else {
-                    self.logger.log(responseData: sessionDataDaskresult.data, response: sessionDataDaskresult.response)
-                    return .success(sessionDataDaskresult.data)
+                    if let response = sessionDataDaskresult.response {
+                        let etag = response.allHeaderFields["Etag"] as? String
+                        switch response.statusCode {
+                        case (200...299):
+                            self.logger.log(responseData: sessionDataDaskresult.data, response: sessionDataDaskresult.response)
+                            return .success(data: sessionDataDaskresult.data, etag: etag)
+                        case 304:
+                            self.logger.log(responseData: sessionDataDaskresult.data, response: sessionDataDaskresult.response)
+                            return .success(data: nil, etag: nil)
+                        default:
+                            error = NetworkError(rawValue: response.statusCode) ?? .unknownError
+                            self.logger.log(error: error)
+                            return .failure(error)
+                        }
+                    } else {
+                        self.logger.log(error: NetworkError.unknownError)
+                        return .failure(NetworkError.unknownError)
+                    }
                 }
             }
     }
