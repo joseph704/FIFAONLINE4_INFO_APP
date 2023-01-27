@@ -8,7 +8,7 @@
 import Foundation
 
 struct APIEndpoints {
-    static func getSpidEtag(etag: String) -> Endpoint<[Spid]> {
+    static func getSpidEtag(etag: String) -> Endpoint<[SpidDTO]> {
         return Endpoint(path: "spid.json",
                         method: .get,
                         headerParameters: ["If-None-Match": etag])

@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 protocol MetaInfoRepository {
-    func fetchSpidWithEtag(etag: String) -> Single<Void>
+    func fetchSpidWithEtag() -> Single<Void>
 }
