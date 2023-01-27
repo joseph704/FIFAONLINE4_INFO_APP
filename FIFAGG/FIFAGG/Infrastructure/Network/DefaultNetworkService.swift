@@ -11,7 +11,7 @@ import RxSwift
 import Alamofire
 
 public enum NetworkResult {
-    case success(data: Data?, etag: String?)
+    case success(data: Data?, isServerDataUpdated: Bool, etag: String)
     case failure(NetworkError)
 }
 
@@ -102,11 +102,20 @@ struct DefaultNetworkService {
                         let etag = response.allHeaderFields["Etag"] as? String
                         switch response.statusCode {
                         case (200...299):
-                            self.logger.log(responseData: sessionDataDaskresult.data, response: sessionDataDaskresult.response)
-                            return .success(data: sessionDataDaskresult.data, etag: etag)
+                            self.logger.log(
+                                responseData: sessionDataDaskresult.data,
+                                response: sessionDataDaskresult.response
+                            )
+                            return .success(
+                                data: sessionDataDaskresult.data,
+                                isServerDataUpdated: true,
+                                etag: etag ?? "")
                         case 304:
                             self.logger.log(responseData: sessionDataDaskresult.data, response: sessionDataDaskresult.response)
-                            return .success(data: nil, etag: nil)
+                            return .success(
+                                data: nil,
+                                isServerDataUpdated: false,
+                                etag: etag ?? "")
                         default:
                             error = NetworkError(rawValue: response.statusCode) ?? .unknownError
                             self.logger.log(error: error)

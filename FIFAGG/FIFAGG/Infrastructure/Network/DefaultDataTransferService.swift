@@ -47,7 +47,7 @@ extension DefaultDataTransferService: DataTransferService {
         return self.networkService.request(endPoint: endpoint)
             .flatMap { networkResult in
                 switch networkResult {
-                case .success(let data, _):
+                case .success(let data, _, _):
                     let result: Single<T> = self.decode(data: data, decoder: endpoint.responseDecoder)
                     return result
                 case .failure(let networkError):
@@ -62,7 +62,7 @@ extension DefaultDataTransferService: DataTransferService {
         let result: Single<Void> = self.networkService.request(endPoint: endpoint)
             .flatMap { networkResult in
                 switch networkResult {
-                case .success(_, _):
+                case .success(_, _, _):
                     return Single.just(())
                 case .failure(let networkError):
                     self.errorLogger.log(error: networkError)
@@ -73,17 +73,25 @@ extension DefaultDataTransferService: DataTransferService {
         return result
     }
     
-    func request<T: Decodable, E: ResponseRequestable>(with endpoint: E) -> Single<(responseDTO: T, responseEtag: String?)> where E.Response == T {
+    func requestWithEtag<T: Decodable, E: ResponseRequestable>(with endpoint: E) -> Single<(response: T?, isServerDataUpdated: Bool, etag: String)> where E.Response == T {
         return self.networkService.request(endPoint: endpoint)
             .flatMap { networkResult in
                 switch networkResult {
-                case .success(let data, let etag):
-                    let result: Single<T> = self.decode(data: data, decoder: endpoint.responseDecoder)
-                    return result.map { ($0, etag) }
+                case .success(let data, let isServerDataUpdated, let etag):
+                    if isServerDataUpdated {
+                        let result: Single<T> = self.decode(data: data, decoder: endpoint.responseDecoder)
+                        return result.map { ($0, isServerDataUpdated, etag) }
+                    } else {
+                        return Single<(response: T?, isServerDataUpdated: Bool, etag: String)>.just((nil, false, ""))
+                    }
+                    
                 case .failure(let networkError):
                     self.errorLogger.log(error: networkError)
                     let error = self.resolve(networkError: networkError)
-                    return Single<T>.error(error).map { ($0, nil) }
+                    return Single<T>.create { singleCloser in
+                        singleCloser(.failure(error))
+                        return Disposables.create()
+                    }.map {($0, false, "")}
                 }
             }
     }

@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+import RealmSwift
+
 final class DefaultIntroCoordinator: IntroCoordinator {
     weak var finishDelegate: CoordinatorFinishDelegate?
     var navigationController: UINavigationController
@@ -20,7 +22,20 @@ final class DefaultIntroCoordinator: IntroCoordinator {
     }
     
     func start() {
-        self.introViewController.viewModel = IntroViewModel()
+        self.introViewController.viewModel = IntroViewModel(
+            fetchSpidUseCase:DefaultFetchSpidUseCase(
+                metaInfoRepository: DefaultMetaInfoRepository(
+                    dataTransferService: DefaultDataTransferService(
+                        with: DefaultNetworkService(
+                            config: ApiDataNetworkConfig(
+                                baseURL: URL(string: "https://static.api.nexon.co.kr/fifaonline4/latest/")!
+                            )
+                        )
+                    ),
+                    spidRealmStorage: DefaultRealmStorage(configuration: Realm.Configuration())
+                )
+            )
+        )
         self.navigationController.viewControllers = [self.introViewController]
     }
     
