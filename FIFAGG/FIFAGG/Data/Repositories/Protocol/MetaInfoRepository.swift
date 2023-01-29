@@ -10,6 +10,6 @@ import Foundation
 import RxSwift
 
 protocol MetaInfoRepository {
-    func fetchSpidWithEtag() -> Single<Void>
-    func fetchMatchTypeWithEtag() -> Single<Void>
+    func fetchSpidWithEtag() -> Observable<Void>
+    func fetchMatchTypeWithEtag() -> Observable<Void>
 }
