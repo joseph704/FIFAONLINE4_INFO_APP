@@ -18,8 +18,8 @@ final class DefaultFetchMetaInfoUseCase: FetchMetaInfoUseCase {
     
     func execute() -> Observable<Void> {
         return Observable<Void>.merge(
-            metaInfoRepository.fetchSpidWithEtag().asObservable(),
-            metaInfoRepository.fetchMatchTypeWithEtag().asObservable()
+            metaInfoRepository.fetchSpidWithEtag(),
+            metaInfoRepository.fetchMatchTypeWithEtag()
         )
     }
 }

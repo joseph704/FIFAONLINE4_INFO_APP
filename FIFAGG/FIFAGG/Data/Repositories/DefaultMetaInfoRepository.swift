@@ -27,11 +27,11 @@ final class DefaultMetaInfoRepository {
 }
 
 extension DefaultMetaInfoRepository: MetaInfoRepository {
-    func fetchSpidWithEtag() -> Single<Void> {
+    func fetchSpidWithEtag() -> Observable<Void> {
         let savedEtag: String = UserDefaults.standard.string(forKey: UserDefaultsKey.spidEtag) ?? ""
         let endpoint = APIEndpoints.getSpidEtag(etag: savedEtag)
         
-        return Single<Void>.create { [weak self] singleCloser in
+        return Observable<Void>.create { [weak self] observer -> Disposable in
             
             guard let self = self else { return Disposables.create() }
             
@@ -45,30 +45,30 @@ extension DefaultMetaInfoRepository: MetaInfoRepository {
                             guard let self = self else { return }
                             
                             self.spidRealmStorage.save(entity: spidDTO)
-                                .subscribe(onNext: {
-                                    singleCloser(.success(()))
-                                }, onError: { error in
-                                    singleCloser(.failure(error))
+                                .subscribe(onError: { error in
+                                    observer.onError(error)
+                                }, onCompleted: {
+                                    observer.onCompleted()
                                 })
                                 .disposed(by: self.disposeBag)
                         }
                     } else { // HTTP StatusCode가 200대가 아니면 isServerDataUpdated값은 false, 즉 Realm의 선수정보 업데이트 하지 않음
-                        singleCloser(.success(()))
+                        observer.onCompleted()
                     }
                 }, onFailure: { networkError in
-                    singleCloser(.failure(networkError))
+                    observer.onError(networkError)
                 })
                 .disposed(by: self.disposeBag)
-
+            
             return Disposables.create()
         }
     }
     
-    func fetchMatchTypeWithEtag() -> Single<Void> {
+    func fetchMatchTypeWithEtag() -> Observable<Void> {
         let savedEtag: String = UserDefaults.standard.string(forKey: UserDefaultsKey.matchTypeEtag) ?? ""
         let endpoint = APIEndpoints.getMatchTypeEtag(etag: savedEtag)
         
-        return Single<Void>.create { [weak self] singleCloser in
+        return Observable<Void>.create { [weak self] observer -> Disposable in
             
             guard let self = self else { return Disposables.create() }
             
@@ -82,21 +82,21 @@ extension DefaultMetaInfoRepository: MetaInfoRepository {
                             guard let self = self else { return }
                             
                             self.matchtypeRealmStorage.save(entity: matchtypeDTO)
-                                .subscribe(onNext: {
-                                    singleCloser(.success(()))
-                                }, onError: { error in
-                                    singleCloser(.failure(error))
+                                .subscribe(onError: { error in
+                                    observer.onError(error)
+                                }, onCompleted: {
+                                    observer.onCompleted()
                                 })
                                 .disposed(by: self.disposeBag)
                         }
                     } else { // HTTP StatusCode가 200대가 아니면 isServerDataUpdated값은 false, 즉 Realm의 선수정보 업데이트 하지 않음
-                        singleCloser(.success(()))
+                        observer.onCompleted()
                     }
                 }, onFailure: { networkError in
-                    singleCloser(.failure(networkError))
+                    observer.onError(networkError)
                 })
                 .disposed(by: self.disposeBag)
-
+            
             return Disposables.create()
         }
     }
