@@ -1,5 +1,5 @@
 //
-//  FetchSpidUseCase.swift
+//  FetchMetaInfoUseCase.swift
 //  FIFAGG
 //
 //  Created by Joseph Cha on 2022/10/12.
@@ -9,6 +9,6 @@ import Foundation
 
 import RxSwift
 
-protocol FetchSpidUseCase {
+protocol FetchMetaInfoUseCase {
     func execute() -> Single<Void>
 }

@@ -23,7 +23,7 @@ final class DefaultIntroCoordinator: IntroCoordinator {
     
     func start() {
         self.introViewController.viewModel = IntroViewModel(
-            fetchSpidUseCase:DefaultFetchSpidUseCase(
+            fetchMetaInfoUseCase: DefaultFetchMetaInfoUseCase(
                 metaInfoRepository: DefaultMetaInfoRepository(
                     dataTransferService: DefaultDataTransferService(
                         with: DefaultNetworkService(
