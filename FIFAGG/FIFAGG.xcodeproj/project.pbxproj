@@ -39,8 +39,8 @@
 		04D486EF28ABC90700EC2D7B /* NetworkSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D486EE28ABC90700EC2D7B /* NetworkSessionManager.swift */; };
 		04D486F128ABD98000EC2D7B /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D486F028ABD98000EC2D7B /* DataTransferService.swift */; };
 		04D486F328ABDAC000EC2D7B /* DefaultDataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D486F228ABDAC000EC2D7B /* DefaultDataTransferService.swift */; };
-		04DA759A28F70B55005325E9 /* FetchSpidUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA759928F70B55005325E9 /* FetchSpidUseCase.swift */; };
-		04DA759C28F70B62005325E9 /* DefaultFetchSpidUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA759B28F70B62005325E9 /* DefaultFetchSpidUseCase.swift */; };
+		04DA759A28F70B55005325E9 /* FetchMetaInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA759928F70B55005325E9 /* FetchMetaInfoUseCase.swift */; };
+		04DA759C28F70B62005325E9 /* DefaultFetchMetaInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA759B28F70B62005325E9 /* DefaultFetchMetaInfoUseCase.swift */; };
 		04DC8A37287D89A1006B7AA9 /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC8A36287D89A1006B7AA9 /* IntroViewModel.swift */; };
 		04F4A31828D2BAFA0000FC61 /* IntroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4A31728D2BAFA0000FC61 /* IntroCoordinator.swift */; };
 		04F4A31C28D2BB230000FC61 /* DefaultIntroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4A31B28D2BB230000FC61 /* DefaultIntroCoordinator.swift */; };
@@ -81,8 +81,8 @@
 		04D486EE28ABC90700EC2D7B /* NetworkSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionManager.swift; sourceTree = "<group>"; };
 		04D486F028ABD98000EC2D7B /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 		04D486F228ABDAC000EC2D7B /* DefaultDataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDataTransferService.swift; sourceTree = "<group>"; };
-		04DA759928F70B55005325E9 /* FetchSpidUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSpidUseCase.swift; sourceTree = "<group>"; };
-		04DA759B28F70B62005325E9 /* DefaultFetchSpidUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFetchSpidUseCase.swift; sourceTree = "<group>"; };
+		04DA759928F70B55005325E9 /* FetchMetaInfoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchMetaInfoUseCase.swift; sourceTree = "<group>"; };
+		04DA759B28F70B62005325E9 /* DefaultFetchMetaInfoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFetchMetaInfoUseCase.swift; sourceTree = "<group>"; };
 		04DC8A36287D89A1006B7AA9 /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
 		04F4A31728D2BAFA0000FC61 /* IntroCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCoordinator.swift; sourceTree = "<group>"; };
 		04F4A31B28D2BB230000FC61 /* DefaultIntroCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultIntroCoordinator.swift; sourceTree = "<group>"; };
@@ -377,7 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				04DA759828F70B40005325E9 /* Protocol */,
-				04DA759B28F70B62005325E9 /* DefaultFetchSpidUseCase.swift */,
+				04DA759B28F70B62005325E9 /* DefaultFetchMetaInfoUseCase.swift */,
 			);
 			path = Usecase;
 			sourceTree = "<group>";
@@ -385,7 +385,7 @@
 		04DA759828F70B40005325E9 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				04DA759928F70B55005325E9 /* FetchSpidUseCase.swift */,
+				04DA759928F70B55005325E9 /* FetchMetaInfoUseCase.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -604,7 +604,7 @@
 				0413455B28E2A9D70077D123 /* RMSpid.swift in Sources */,
 				044E9F3628E6EDD7003461FB /* RealmResponseType.swift in Sources */,
 				04988F8328ADD3DD0013D0CF /* MetaInfoRepository.swift in Sources */,
-				04DA759C28F70B62005325E9 /* DefaultFetchSpidUseCase.swift in Sources */,
+				04DA759C28F70B62005325E9 /* DefaultFetchMetaInfoUseCase.swift in Sources */,
 				04D486ED28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift in Sources */,
 				0413455F28E2B6170077D123 /* Realm+Extension.swift in Sources */,
 				044532EB28E273BB00C0B08F /* RealmStorage.swift in Sources */,
@@ -614,7 +614,7 @@
 				04D486EF28ABC90700EC2D7B /* NetworkSessionManager.swift in Sources */,
 				04D486F128ABD98000EC2D7B /* DataTransferService.swift in Sources */,
 				0413456628E2C9CA0077D123 /* RealmRepresentable.swift in Sources */,
-				04DA759A28F70B55005325E9 /* FetchSpidUseCase.swift in Sources */,
+				04DA759A28F70B55005325E9 /* FetchMetaInfoUseCase.swift in Sources */,
 				04F4A31828D2BAFA0000FC61 /* IntroCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  DefaultFetchSpidUseCase.swift
+//  DefaultFetchMetaInfoUseCase.swift
 //  FIFAGG
 //
 //  Created by Joseph Cha on 2022/10/12.
@@ -9,7 +9,7 @@ import Foundation
 
 import RxSwift
 
-final class DefaultFetchSpidUseCase: FetchSpidUseCase {
+final class DefaultFetchMetaInfoUseCase: FetchMetaInfoUseCase {
     private let metaInfoRepository: MetaInfoRepository
     
     init(metaInfoRepository: MetaInfoRepository) {

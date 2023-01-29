@@ -12,16 +12,16 @@ import RxSwift
 import RealmSwift
 
 struct IntroViewModel: ViewModelType {
-    private let fetchSpidUseCase: FetchSpidUseCase
+    private let fetchMetaInfoUseCase: FetchMetaInfoUseCase
     
     private let disposeBag: DisposeBag = DisposeBag()
     
-    init(fetchSpidUseCase: FetchSpidUseCase) {
-        self.fetchSpidUseCase = fetchSpidUseCase
+    init(fetchMetaInfoUseCase: FetchMetaInfoUseCase) {
+        self.fetchMetaInfoUseCase = fetchMetaInfoUseCase
     }
     
     func convert(from: Input, disposedBag: DisposeBag) -> Output {
-        fetchSpidUseCase.execute()
+        fetchMetaInfoUseCase.execute()
             .subscribe {
                 print("성공")
                 
