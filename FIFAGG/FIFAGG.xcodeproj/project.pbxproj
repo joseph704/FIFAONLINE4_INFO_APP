@@ -17,6 +17,7 @@
 		044532ED28E273C400C0B08F /* DefaultRealmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044532EC28E273C400C0B08F /* DefaultRealmStorage.swift */; };
 		044E9F3428E6ED9A003461FB /* Observable+Extesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E9F3328E6ED9A003461FB /* Observable+Extesion.swift */; };
 		044E9F3628E6EDD7003461FB /* RealmResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E9F3528E6EDD7003461FB /* RealmResponseType.swift */; };
+		045046042986A180005CD24F /* MatchtypeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045046032986A180005CD24F /* MatchtypeDTO.swift */; };
 		045A2F1828AB834600A0E79B /* DefaultNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A2F1728AB834600A0E79B /* DefaultNetworkService.swift */; };
 		045A2F1A28AB836A00A0E79B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A2F1928AB836A00A0E79B /* NetworkService.swift */; };
 		045A2F1C28AB841B00A0E79B /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A2F1B28AB841B00A0E79B /* EndPoint.swift */; };
@@ -42,6 +43,7 @@
 		04DA759A28F70B55005325E9 /* FetchMetaInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA759928F70B55005325E9 /* FetchMetaInfoUseCase.swift */; };
 		04DA759C28F70B62005325E9 /* DefaultFetchMetaInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA759B28F70B62005325E9 /* DefaultFetchMetaInfoUseCase.swift */; };
 		04DC8A37287D89A1006B7AA9 /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC8A36287D89A1006B7AA9 /* IntroViewModel.swift */; };
+		04E6F7D72986BBD400EAC695 /* RMMatchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045046052986A1AD005CD24F /* RMMatchType.swift */; };
 		04F4A31828D2BAFA0000FC61 /* IntroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4A31728D2BAFA0000FC61 /* IntroCoordinator.swift */; };
 		04F4A31C28D2BB230000FC61 /* DefaultIntroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4A31B28D2BB230000FC61 /* DefaultIntroCoordinator.swift */; };
 		04F4A32028D2BD7A0000FC61 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4A31F28D2BD7A0000FC61 /* Coordinator.swift */; };
@@ -60,6 +62,8 @@
 		044532EC28E273C400C0B08F /* DefaultRealmStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRealmStorage.swift; sourceTree = "<group>"; };
 		044E9F3328E6ED9A003461FB /* Observable+Extesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Extesion.swift"; sourceTree = "<group>"; };
 		044E9F3528E6EDD7003461FB /* RealmResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmResponseType.swift; sourceTree = "<group>"; };
+		045046032986A180005CD24F /* MatchtypeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchtypeDTO.swift; sourceTree = "<group>"; };
+		045046052986A1AD005CD24F /* RMMatchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMMatchType.swift; sourceTree = "<group>"; };
 		045A2F1728AB834600A0E79B /* DefaultNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkService.swift; sourceTree = "<group>"; };
 		045A2F1928AB836A00A0E79B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		045A2F1B28AB841B00A0E79B /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				0413456728E2C9F40077D123 /* Protocol */,
+				045046052986A1AD005CD24F /* RMMatchType.swift */,
 				0413455A28E2A9D70077D123 /* RMSpid.swift */,
 			);
 			path = DataMapping;
@@ -243,6 +248,7 @@
 				048667FA2841FF51004E7AAE /* Products */,
 				201121FCB75B15369A850451 /* Pods */,
 				246AC114B457C0AC6AFFCD53 /* Frameworks */,
+				04E6F7D62986B9E600EAC695 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -390,6 +396,14 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		04E6F7D62986B9E600EAC695 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				045046072986A839005CD24F /* FetchMatchtypeUseCase.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		04F4A31928D2BAFE0000FC61 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -437,6 +451,7 @@
 		04FEEAB528C8EE6600BF005E /* DataMapping */ = {
 			isa = PBXGroup;
 			children = (
+				045046032986A180005CD24F /* MatchtypeDTO.swift */,
 				04FEEAB328C8EE6100BF005E /* SpidDTO.swift */,
 			);
 			path = DataMapping;
@@ -611,10 +626,12 @@
 				04F4A32028D2BD7A0000FC61 /* Coordinator.swift in Sources */,
 				045A2F1A28AB836A00A0E79B /* NetworkService.swift in Sources */,
 				04DC8A37287D89A1006B7AA9 /* IntroViewModel.swift in Sources */,
+				045046042986A180005CD24F /* MatchtypeDTO.swift in Sources */,
 				04D486EF28ABC90700EC2D7B /* NetworkSessionManager.swift in Sources */,
 				04D486F128ABD98000EC2D7B /* DataTransferService.swift in Sources */,
 				0413456628E2C9CA0077D123 /* RealmRepresentable.swift in Sources */,
 				04DA759A28F70B55005325E9 /* FetchMetaInfoUseCase.swift in Sources */,
+				04E6F7D72986BBD400EAC695 /* RMMatchType.swift in Sources */,
 				04F4A31828D2BAFA0000FC61 /* IntroCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -757,7 +774,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BAT7Y9H9TP;
+				DEVELOPMENT_TEAM = MH2ZJS3XW4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FIFAGG/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -769,7 +786,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.kpu.-.FIFAGG";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.kpu.FIFAGG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -785,7 +802,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BAT7Y9H9TP;
+				DEVELOPMENT_TEAM = MH2ZJS3XW4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FIFAGG/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -797,7 +814,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.kpu.-.FIFAGG";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.kpu.FIFAGG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

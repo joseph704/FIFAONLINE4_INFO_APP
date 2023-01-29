@@ -22,18 +22,22 @@ struct IntroViewModel: ViewModelType {
     
     func convert(from: Input, disposedBag: DisposeBag) -> Output {
         fetchMetaInfoUseCase.execute()
-            .subscribe {
+            .subscribe(onError: { error in
+                print(error.localizedDescription)
+            }, onCompleted: {
                 print("성공")
-                
-                // TODO: 테스트를 위한 선수 정보 로그 찍기
                 let realmSPID = DefaultRealmStorage<SpidDTO>(configuration: Realm.Configuration())
                 realmSPID.queryAll().subscribe {
                     print($0)
                 }
                 .disposed(by: disposedBag)
-            } onFailure: { error in
-                print(error.localizedDescription)
-            }
+                
+                let realmMatchtype = DefaultRealmStorage<MatchtypeDTO>(configuration: Realm.Configuration())
+                realmMatchtype.queryAll().subscribe {
+                    print($0)
+                }
+                .disposed(by: disposedBag)
+            })
             .disposed(by: disposeBag)
 
         return Output()
