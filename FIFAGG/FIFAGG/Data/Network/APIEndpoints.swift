@@ -13,4 +13,10 @@ struct APIEndpoints {
                         method: .get,
                         headerParameters: ["If-None-Match": etag])
     }
+    
+    static func getMatchTypeEtag(etag: String) -> Endpoint<[MatchtypeDTO]> {
+        return Endpoint(path: "matchtype.json",
+                        method: .get,
+                        headerParameters: ["If-None-Match": etag])
+    }
 }

@@ -32,7 +32,8 @@ final class DefaultIntroCoordinator: IntroCoordinator {
                             )
                         )
                     ),
-                    spidRealmStorage: DefaultRealmStorage(configuration: Realm.Configuration())
+                    spidRealmStorage: DefaultRealmStorage(configuration: Realm.Configuration()),
+                    matchtypeRealmStorage: DefaultRealmStorage(configuration: Realm.Configuration())
                 )
             )
         )

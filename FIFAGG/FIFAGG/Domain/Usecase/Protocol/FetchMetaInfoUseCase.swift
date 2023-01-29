@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 protocol FetchMetaInfoUseCase {
-    func execute() -> Single<Void>
+    func execute() -> Observable<Void>
 }
