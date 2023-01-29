@@ -9,4 +9,5 @@ import Foundation
 
 enum UserDefaultsKey {
     static let spidEtag = "spidEtag"
+    static let matchTypeEtag = "matchTypeEtag"
 }
