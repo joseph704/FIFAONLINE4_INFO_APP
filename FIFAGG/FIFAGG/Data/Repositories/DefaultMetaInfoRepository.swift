@@ -75,7 +75,7 @@ extension DefaultMetaInfoRepository: MetaInfoRepository {
             self.dataTransferService.requestWithEtag(with: endpoint)
                 .subscribe(onSuccess: { (response, isServerDataUpdated, etag) in
                     
-                    UserDefaults.standard.set(etag, forKey: UserDefaultsKey.spidEtag) // 서버로 부터 받은 etag 저장
+                    UserDefaults.standard.set(etag, forKey: UserDefaultsKey.matchTypeEtag) // 서버로 부터 받은 etag 저장
                     
                     if isServerDataUpdated { // HTTP StatusCode가 200대면 isServerDataUpdated값은 true, 즉 Realm의 선수정보 업데이트
                         response?.forEach { [weak self] matchtypeDTO in
