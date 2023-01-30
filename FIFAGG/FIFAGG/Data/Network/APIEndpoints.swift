@@ -19,4 +19,10 @@ struct APIEndpoints {
                         method: .get,
                         headerParameters: ["If-None-Match": etag])
     }
+    
+    static func getSeasonIdEtag(etag: String) -> Endpoint<[SeasonIdDTO]> {
+        return Endpoint(path: "seasonid.json",
+                        method: .get,
+                        headerParameters: ["If-None-Match": etag])
+    }
 }
