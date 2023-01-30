@@ -34,80 +34,43 @@ extension DefaultMetaInfoRepository: MetaInfoRepository {
         let savedEtag: String = UserDefaults.standard.string(forKey: UserDefaultsKey.spidEtag) ?? ""
         let endpoint = APIEndpoints.getSpidEtag(etag: savedEtag)
         
-        return Observable<Void>.create { [weak self] observer -> Disposable in
-            
-            guard let self = self else { return Disposables.create() }
-            
-            self.dataTransferService.requestWithEtag(with: endpoint)
-                .subscribe(onSuccess: { (response, isServerDataUpdated, etag) in
-                    
-                    UserDefaults.standard.set(etag, forKey: UserDefaultsKey.spidEtag) // 서버로 부터 받은 etag 저장
-                    
-                    if isServerDataUpdated { // HTTP StatusCode가 200대면 isServerDataUpdated값은 true, 즉 Realm의 선수정보 업데이트
-                        response?.forEach { [weak self] spidDTO in
-                            guard let self = self else { return }
-                            
-                            self.spidRealmStorage.save(entity: spidDTO)
-                                .subscribe(onError: { error in
-                                    observer.onError(error)
-                                }, onCompleted: {
-                                    observer.onCompleted()
-                                })
-                                .disposed(by: self.disposeBag)
-                        }
-                    } else { // HTTP StatusCode가 200대가 아니면 isServerDataUpdated값은 false, 즉 Realm의 선수정보 업데이트 하지 않음
-                        observer.onCompleted()
-                    }
-                }, onFailure: { networkError in
-                    observer.onError(networkError)
-                })
-                .disposed(by: self.disposeBag)
-            
-            return Disposables.create()
-        }
+        return self.fetchMetaInfo(
+            metaInfoRealmStorage: self.spidRealmStorage,
+            endpoint: endpoint,
+            userDefaultsKey: UserDefaultsKey.spidEtag
+        )
     }
     
     func fetchMatchTypeWithEtag() -> Observable<Void> {
         let savedEtag: String = UserDefaults.standard.string(forKey: UserDefaultsKey.matchTypeEtag) ?? ""
         let endpoint = APIEndpoints.getMatchTypeEtag(etag: savedEtag)
         
-        return Observable<Void>.create { [weak self] observer -> Disposable in
-            
-            guard let self = self else { return Disposables.create() }
-            
-            self.dataTransferService.requestWithEtag(with: endpoint)
-                .subscribe(onSuccess: { (response, isServerDataUpdated, etag) in
-                    
-                    UserDefaults.standard.set(etag, forKey: UserDefaultsKey.matchTypeEtag) // 서버로 부터 받은 etag 저장
-                    
-                    if isServerDataUpdated { // HTTP StatusCode가 200대면 isServerDataUpdated값은 true, 즉 Realm의 선수정보 업데이트
-                        response?.forEach { [weak self] matchtypeDTO in
-                            guard let self = self else { return }
-                            
-                            self.matchtypeRealmStorage.save(entity: matchtypeDTO)
-                                .subscribe(onError: { error in
-                                    observer.onError(error)
-                                }, onCompleted: {
-                                    observer.onCompleted()
-                                })
-                                .disposed(by: self.disposeBag)
-                        }
-                    } else { // HTTP StatusCode가 200대가 아니면 isServerDataUpdated값은 false, 즉 Realm의 선수정보 업데이트 하지 않음
-                        observer.onCompleted()
-                    }
-                }, onFailure: { networkError in
-                    observer.onError(networkError)
-                })
-                .disposed(by: self.disposeBag)
-            
-            return Disposables.create()
-        }
+        return self.fetchMetaInfo(
+            metaInfoRealmStorage: self.matchtypeRealmStorage,
+            endpoint: endpoint,
+            userDefaultsKey: UserDefaultsKey.matchTypeEtag
+        )
     }
     
     func fetchSeasonIdWithEtag() -> Observable<Void> {
         let savedEtag: String = UserDefaults.standard.string(forKey: UserDefaultsKey.seasonIdEtag) ?? ""
         let endpoint = APIEndpoints.getSeasonIdEtag(etag: savedEtag)
         
+        return self.fetchMetaInfo(
+            metaInfoRealmStorage: self.seasonIdRealmStorage,
+            endpoint: endpoint,
+            userDefaultsKey: UserDefaultsKey.seasonIdEtag
+        )
+    }
+}
+
+//MARK: Private Extension
+private extension DefaultMetaInfoRepository {
+    func fetchMetaInfo<T: RealmRepresentable>(
+        metaInfoRealmStorage: DefaultRealmStorage<T>,
+        endpoint: Endpoint<[T]>,
+        userDefaultsKey: String
+    ) -> Observable<Void> where T: Decodable {
         return Observable<Void>.create { [weak self] observer -> Disposable in
             
             guard let self = self else { return Disposables.create() }
@@ -115,13 +78,13 @@ extension DefaultMetaInfoRepository: MetaInfoRepository {
             self.dataTransferService.requestWithEtag(with: endpoint)
                 .subscribe(onSuccess: { (response, isServerDataUpdated, etag) in
                     
-                    UserDefaults.standard.set(etag, forKey: UserDefaultsKey.seasonIdEtag) // 서버로 부터 받은 etag 저장
+                    UserDefaults.standard.set(etag, forKey: userDefaultsKey) // 서버로 부터 받은 etag 저장
                     
                     if isServerDataUpdated { // HTTP StatusCode가 200대면 isServerDataUpdated값은 true, 즉 Realm의 선수정보 업데이트
-                        response?.forEach { [weak self] seasonIdDTO in
+                        response?.forEach { [weak self] metaInfoDTO in
                             guard let self = self else { return }
                             
-                            self.seasonIdRealmStorage.save(entity: seasonIdDTO)
+                            metaInfoRealmStorage.save(entity: metaInfoDTO)
                                 .subscribe(onError: { error in
                                     observer.onError(error)
                                 }, onCompleted: {
