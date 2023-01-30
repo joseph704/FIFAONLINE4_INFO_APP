@@ -37,6 +37,12 @@ struct IntroViewModel: ViewModelType {
                     print($0)
                 }
                 .disposed(by: disposedBag)
+                
+                let realmSeasonId = DefaultRealmStorage<SeasonIdDTO>(configuration: Realm.Configuration())
+                realmSeasonId.queryAll().subscribe {
+                    print($0)
+                }
+                .disposed(by: disposedBag)
             })
             .disposed(by: disposeBag)
 

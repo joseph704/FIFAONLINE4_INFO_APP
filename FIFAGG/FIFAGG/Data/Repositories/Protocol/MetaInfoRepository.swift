@@ -12,4 +12,5 @@ import RxSwift
 protocol MetaInfoRepository {
     func fetchSpidWithEtag() -> Observable<Void>
     func fetchMatchTypeWithEtag() -> Observable<Void>
+    func fetchSeasonIdWithEtag() -> Observable<Void>
 }

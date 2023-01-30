@@ -22,6 +22,8 @@
 		045A2F1A28AB836A00A0E79B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A2F1928AB836A00A0E79B /* NetworkService.swift */; };
 		045A2F1C28AB841B00A0E79B /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A2F1B28AB841B00A0E79B /* EndPoint.swift */; };
 		045A2F1E28AB848100A0E79B /* ApiDataNetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A2F1D28AB848100A0E79B /* ApiDataNetworkConfig.swift */; };
+		047D8FC629879DAB0007CA24 /* SeasonIdDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D8FC529879DAB0007CA24 /* SeasonIdDTO.swift */; };
+		047D8FC829879F480007CA24 /* RMSeasonId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D8FC729879F480007CA24 /* RMSeasonId.swift */; };
 		048667FD2841FF51004E7AAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048667FC2841FF51004E7AAE /* AppDelegate.swift */; };
 		048667FF2841FF51004E7AAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048667FE2841FF51004E7AAE /* SceneDelegate.swift */; };
 		048668062841FF52004E7AAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048668052841FF52004E7AAE /* Assets.xcassets */; };
@@ -68,6 +70,8 @@
 		045A2F1928AB836A00A0E79B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		045A2F1B28AB841B00A0E79B /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		045A2F1D28AB848100A0E79B /* ApiDataNetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiDataNetworkConfig.swift; sourceTree = "<group>"; };
+		047D8FC529879DAB0007CA24 /* SeasonIdDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonIdDTO.swift; sourceTree = "<group>"; };
+		047D8FC729879F480007CA24 /* RMSeasonId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSeasonId.swift; sourceTree = "<group>"; };
 		048667F92841FF51004E7AAE /* FIFAGG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIFAGG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048667FC2841FF51004E7AAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		048667FE2841FF51004E7AAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -216,6 +220,7 @@
 				0413456728E2C9F40077D123 /* Protocol */,
 				045046052986A1AD005CD24F /* RMMatchType.swift */,
 				0413455A28E2A9D70077D123 /* RMSpid.swift */,
+				047D8FC729879F480007CA24 /* RMSeasonId.swift */,
 			);
 			path = DataMapping;
 			sourceTree = "<group>";
@@ -399,7 +404,6 @@
 		04E6F7D62986B9E600EAC695 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				045046072986A839005CD24F /* FetchMatchtypeUseCase.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -453,6 +457,7 @@
 			children = (
 				045046032986A180005CD24F /* MatchtypeDTO.swift */,
 				04FEEAB328C8EE6100BF005E /* SpidDTO.swift */,
+				047D8FC529879DAB0007CA24 /* SeasonIdDTO.swift */,
 			);
 			path = DataMapping;
 			sourceTree = "<group>";
@@ -619,6 +624,7 @@
 				0413455B28E2A9D70077D123 /* RMSpid.swift in Sources */,
 				044E9F3628E6EDD7003461FB /* RealmResponseType.swift in Sources */,
 				04988F8328ADD3DD0013D0CF /* MetaInfoRepository.swift in Sources */,
+				047D8FC829879F480007CA24 /* RMSeasonId.swift in Sources */,
 				04DA759C28F70B62005325E9 /* DefaultFetchMetaInfoUseCase.swift in Sources */,
 				04D486ED28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift in Sources */,
 				0413455F28E2B6170077D123 /* Realm+Extension.swift in Sources */,
@@ -626,6 +632,7 @@
 				04F4A32028D2BD7A0000FC61 /* Coordinator.swift in Sources */,
 				045A2F1A28AB836A00A0E79B /* NetworkService.swift in Sources */,
 				04DC8A37287D89A1006B7AA9 /* IntroViewModel.swift in Sources */,
+				047D8FC629879DAB0007CA24 /* SeasonIdDTO.swift in Sources */,
 				045046042986A180005CD24F /* MatchtypeDTO.swift in Sources */,
 				04D486EF28ABC90700EC2D7B /* NetworkSessionManager.swift in Sources */,
 				04D486F128ABD98000EC2D7B /* DataTransferService.swift in Sources */,
