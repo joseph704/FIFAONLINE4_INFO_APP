@@ -11,4 +11,5 @@ enum UserDefaultsKey {
     static let spidEtag = "spidEtag"
     static let matchTypeEtag = "matchTypeEtag"
     static let seasonIdEtag = "seasonIdEtag"
+    static let spPosition = "spPosition"
 }

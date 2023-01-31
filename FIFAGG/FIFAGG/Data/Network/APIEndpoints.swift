@@ -25,4 +25,10 @@ struct APIEndpoints {
                         method: .get,
                         headerParameters: ["If-None-Match": etag])
     }
+    
+    static func getSPPositionEtag(etag: String) -> Endpoint<[SPPostionDTO]> {
+        return Endpoint(path: "spposition.json",
+                        method: .get,
+                        headerParameters: ["If-None-Match": etag])
+    }
 }

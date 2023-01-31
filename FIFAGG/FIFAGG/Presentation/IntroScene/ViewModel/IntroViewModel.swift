@@ -43,6 +43,12 @@ struct IntroViewModel: ViewModelType {
                     print($0)
                 }
                 .disposed(by: disposedBag)
+               
+                let realmSPPosition = DefaultRealmStorage<SPPostionDTO>(configuration: Realm.Configuration())
+                realmSPPosition.queryAll().subscribe {
+                    print($0)
+                }
+                .disposed(by: disposedBag)
             })
             .disposed(by: disposeBag)
 

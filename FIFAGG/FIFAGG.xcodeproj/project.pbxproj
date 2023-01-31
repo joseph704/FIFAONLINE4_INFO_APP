@@ -38,6 +38,8 @@
 		04A3988028D99924007D93B7 /* DefaultAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3987F28D99924007D93B7 /* DefaultAppCoordinator.swift */; };
 		04A3988428D99E06007D93B7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3988328D99E06007D93B7 /* AppCoordinator.swift */; };
 		04C3283928EC8210006A47D7 /* RxRealm in Frameworks */ = {isa = PBXBuildFile; productRef = 04C3283828EC8210006A47D7 /* RxRealm */; };
+		04C6F50129896658003D9268 /* SPPostionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6F50029896658003D9268 /* SPPostionDTO.swift */; };
+		04C6F503298966CC003D9268 /* RMSPPostion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6F502298966CC003D9268 /* RMSPPostion.swift */; };
 		04D486ED28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D486EC28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift */; };
 		04D486EF28ABC90700EC2D7B /* NetworkSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D486EE28ABC90700EC2D7B /* NetworkSessionManager.swift */; };
 		04D486F128ABD98000EC2D7B /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D486F028ABD98000EC2D7B /* DataTransferService.swift */; };
@@ -85,6 +87,8 @@
 		04A3987C28D998CA007D93B7 /* CoordinatorFinishDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFinishDelegate.swift; sourceTree = "<group>"; };
 		04A3987F28D99924007D93B7 /* DefaultAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAppCoordinator.swift; sourceTree = "<group>"; };
 		04A3988328D99E06007D93B7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		04C6F50029896658003D9268 /* SPPostionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPPostionDTO.swift; sourceTree = "<group>"; };
+		04C6F502298966CC003D9268 /* RMSPPostion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSPPostion.swift; sourceTree = "<group>"; };
 		04D486EC28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkSessionManager.swift; sourceTree = "<group>"; };
 		04D486EE28ABC90700EC2D7B /* NetworkSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionManager.swift; sourceTree = "<group>"; };
 		04D486F028ABD98000EC2D7B /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
@@ -221,6 +225,7 @@
 				045046052986A1AD005CD24F /* RMMatchType.swift */,
 				0413455A28E2A9D70077D123 /* RMSpid.swift */,
 				047D8FC729879F480007CA24 /* RMSeasonId.swift */,
+				04C6F502298966CC003D9268 /* RMSPPostion.swift */,
 			);
 			path = DataMapping;
 			sourceTree = "<group>";
@@ -458,6 +463,7 @@
 				045046032986A180005CD24F /* MatchtypeDTO.swift */,
 				04FEEAB328C8EE6100BF005E /* SpidDTO.swift */,
 				047D8FC529879DAB0007CA24 /* SeasonIdDTO.swift */,
+				04C6F50029896658003D9268 /* SPPostionDTO.swift */,
 			);
 			path = DataMapping;
 			sourceTree = "<group>";
@@ -604,6 +610,7 @@
 			files = (
 				045A2F1E28AB848100A0E79B /* ApiDataNetworkConfig.swift in Sources */,
 				045A2F1C28AB841B00A0E79B /* EndPoint.swift in Sources */,
+				04C6F503298966CC003D9268 /* RMSPPostion.swift in Sources */,
 				04A3988428D99E06007D93B7 /* AppCoordinator.swift in Sources */,
 				04A3987D28D998CA007D93B7 /* CoordinatorFinishDelegate.swift in Sources */,
 				04988F8128ADD2110013D0CF /* DefaultMetaInfoRepository.swift in Sources */,
@@ -636,6 +643,7 @@
 				045046042986A180005CD24F /* MatchtypeDTO.swift in Sources */,
 				04D486EF28ABC90700EC2D7B /* NetworkSessionManager.swift in Sources */,
 				04D486F128ABD98000EC2D7B /* DataTransferService.swift in Sources */,
+				04C6F50129896658003D9268 /* SPPostionDTO.swift in Sources */,
 				0413456628E2C9CA0077D123 /* RealmRepresentable.swift in Sources */,
 				04DA759A28F70B55005325E9 /* FetchMetaInfoUseCase.swift in Sources */,
 				04E6F7D72986BBD400EAC695 /* RMMatchType.swift in Sources */,
