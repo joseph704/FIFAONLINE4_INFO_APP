@@ -81,17 +81,18 @@ private extension DefaultMetaInfoRepository {
                     UserDefaults.standard.set(etag, forKey: userDefaultsKey) // 서버로 부터 받은 etag 저장
                     
                     if isServerDataUpdated { // HTTP StatusCode가 200대면 isServerDataUpdated값은 true, 즉 Realm의 선수정보 업데이트
-                        response?.forEach { [weak self] metaInfoDTO in
-                            guard let self = self else { return }
-                            
-                            metaInfoRealmStorage.save(entity: metaInfoDTO)
-                                .subscribe(onError: { error in
-                                    observer.onError(error)
-                                }, onCompleted: {
-                                    observer.onCompleted()
-                                })
-                                .disposed(by: self.disposeBag)
+                        guard let response = response else {
+                            observer.onCompleted()
+                            return
                         }
+                        
+                        metaInfoRealmStorage.save(entities: response)
+                            .subscribe(onError: { error in
+                                observer.onError(error)
+                            },onCompleted: {
+                                observer.onCompleted()
+                            })
+                            .disposed(by: self.disposeBag)
                     } else { // HTTP StatusCode가 200대가 아니면 isServerDataUpdated값은 false, 즉 Realm의 선수정보 업데이트 하지 않음
                         observer.onCompleted()
                     }

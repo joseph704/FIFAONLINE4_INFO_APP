@@ -53,6 +53,12 @@ final class DefaultRealmStorage<T: RealmRepresentable>: RealmStorage where T == 
         }
     }
 
+    func save(entities: [T]) -> Observable<Void> {
+        return Observable.deferred {
+            return self.realm.rx.save(entities: entities)
+        }
+    }
+    
     func delete(entity: T) -> Observable<Void> {
         return Observable.deferred {
             return self.realm.rx.delete(entity: entity)
