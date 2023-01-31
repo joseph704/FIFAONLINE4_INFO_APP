@@ -20,7 +20,8 @@ final class DefaultFetchMetaInfoUseCase: FetchMetaInfoUseCase {
         return Observable<Void>.merge(
             metaInfoRepository.fetchSpidWithEtag(),
             metaInfoRepository.fetchMatchTypeWithEtag(),
-            metaInfoRepository.fetchSeasonIdWithEtag()
+            metaInfoRepository.fetchSeasonIdWithEtag(),
+            metaInfoRepository.fetchSPPositionWithEtag()
         )
     }
 }

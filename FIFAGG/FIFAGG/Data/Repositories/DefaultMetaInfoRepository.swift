@@ -15,17 +15,20 @@ final class DefaultMetaInfoRepository {
     private let spidRealmStorage: DefaultRealmStorage<SpidDTO>
     private let matchtypeRealmStorage: DefaultRealmStorage<MatchtypeDTO>
     private let seasonIdRealmStorage: DefaultRealmStorage<SeasonIdDTO>
+    private let spPositionRealmStorage: DefaultRealmStorage<SPPostionDTO>
     private let disposeBag = DisposeBag()
     
     init(dataTransferService: DataTransferService,
          spidRealmStorage: DefaultRealmStorage<SpidDTO>,
          matchtypeRealmStorage: DefaultRealmStorage<MatchtypeDTO>,
-         seasonIdRealmStorage: DefaultRealmStorage<SeasonIdDTO>
+         seasonIdRealmStorage: DefaultRealmStorage<SeasonIdDTO>,
+         spPositionRealmStorage: DefaultRealmStorage<SPPostionDTO>
     ) {
         self.dataTransferService = dataTransferService
         self.spidRealmStorage = spidRealmStorage
         self.matchtypeRealmStorage = matchtypeRealmStorage
         self.seasonIdRealmStorage = seasonIdRealmStorage
+        self.spPositionRealmStorage = spPositionRealmStorage
     }
 }
 
@@ -60,6 +63,17 @@ extension DefaultMetaInfoRepository: MetaInfoRepository {
             metaInfoRealmStorage: self.seasonIdRealmStorage,
             endpoint: endpoint,
             userDefaultsKey: UserDefaultsKey.seasonIdEtag
+        )
+    }
+    
+    func fetchSPPositionWithEtag() -> Observable<Void> {
+        let savedEtag: String = UserDefaults.standard.string(forKey: UserDefaultsKey.spPosition) ?? ""
+        let endpoint = APIEndpoints.getSPPositionEtag(etag: savedEtag)
+        
+        return self.fetchMetaInfo(
+            metaInfoRealmStorage: self.spPositionRealmStorage,
+            endpoint: endpoint,
+            userDefaultsKey: UserDefaultsKey.spPosition
         )
     }
 }
