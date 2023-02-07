@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpidDTO: Decodable {
+struct SpidDTO: Decodable { 
     let id: Int
     let name: String
     var objectID: String {
