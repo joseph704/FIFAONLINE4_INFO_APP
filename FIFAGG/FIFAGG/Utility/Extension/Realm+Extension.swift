@@ -25,6 +25,14 @@ extension RealmSwift.SortDescriptor {
 }
 
 extension Reactive where Base == Realm {
+
+    /**
+        Realm 객체를 저장하는 메소드
+
+        - Parameters:
+           - entity: RealmRepresentable (Realm 객체).
+           - update: 업데이트 유무 Bool값.
+     */
     func save<R: RealmRepresentable>(entity: R, update: Bool = true) -> Observable<Void> where R.RealmType: Object {
         return Observable.create { observer in
             do {
@@ -40,6 +48,13 @@ extension Reactive where Base == Realm {
         }
     }
 
+    /**
+        Realm 객체 배열을 저장하는 메소드
+
+        - Parameters:
+            - entity: RealmRepresentable (Realm 객체).
+            - update: 업데이트 유무 Bool값.
+     */
     func save<R: RealmRepresentable>(entities: [R], update: Bool = true) -> Observable<Void> where R.RealmType: Object {
         return Observable.create { observer in
             do {
