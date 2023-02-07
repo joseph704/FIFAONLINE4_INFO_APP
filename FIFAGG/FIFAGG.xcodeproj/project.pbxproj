@@ -37,6 +37,8 @@
 		04A3987D28D998CA007D93B7 /* CoordinatorFinishDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3987C28D998CA007D93B7 /* CoordinatorFinishDelegate.swift */; };
 		04A3988028D99924007D93B7 /* DefaultAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3987F28D99924007D93B7 /* DefaultAppCoordinator.swift */; };
 		04A3988428D99E06007D93B7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3988328D99E06007D93B7 /* AppCoordinator.swift */; };
+		04BDA3ED299281880020EB58 /* DivisionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDA3EC299281880020EB58 /* DivisionDTO.swift */; };
+		04BDA3EF299281E60020EB58 /* RMDivision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDA3EE299281E60020EB58 /* RMDivision.swift */; };
 		04C3283928EC8210006A47D7 /* RxRealm in Frameworks */ = {isa = PBXBuildFile; productRef = 04C3283828EC8210006A47D7 /* RxRealm */; };
 		04C6F50129896658003D9268 /* SPPostionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6F50029896658003D9268 /* SPPostionDTO.swift */; };
 		04C6F503298966CC003D9268 /* RMSPPostion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6F502298966CC003D9268 /* RMSPPostion.swift */; };
@@ -92,6 +94,8 @@
 		04A3987C28D998CA007D93B7 /* CoordinatorFinishDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFinishDelegate.swift; sourceTree = "<group>"; };
 		04A3987F28D99924007D93B7 /* DefaultAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAppCoordinator.swift; sourceTree = "<group>"; };
 		04A3988328D99E06007D93B7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		04BDA3EC299281880020EB58 /* DivisionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionDTO.swift; sourceTree = "<group>"; };
+		04BDA3EE299281E60020EB58 /* RMDivision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMDivision.swift; sourceTree = "<group>"; };
 		04C6F50029896658003D9268 /* SPPostionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPPostionDTO.swift; sourceTree = "<group>"; };
 		04C6F502298966CC003D9268 /* RMSPPostion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSPPostion.swift; sourceTree = "<group>"; };
 		04D486EC28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkSessionManager.swift; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 				0413455A28E2A9D70077D123 /* RMSpid.swift */,
 				047D8FC729879F480007CA24 /* RMSeasonId.swift */,
 				04C6F502298966CC003D9268 /* RMSPPostion.swift */,
+				04BDA3EE299281E60020EB58 /* RMDivision.swift */,
 			);
 			path = DataMapping;
 			sourceTree = "<group>";
@@ -469,6 +474,7 @@
 				04FEEAB328C8EE6100BF005E /* SpidDTO.swift */,
 				047D8FC529879DAB0007CA24 /* SeasonIdDTO.swift */,
 				04C6F50029896658003D9268 /* SPPostionDTO.swift */,
+				04BDA3EC299281880020EB58 /* DivisionDTO.swift */,
 			);
 			path = DataMapping;
 			sourceTree = "<group>";
@@ -572,8 +578,10 @@
 				045A2F1828AB834600A0E79B /* DefaultNetworkService.swift in Sources */,
 				04213A0B2869A9E600C50CFC /* IntroViewController.swift in Sources */,
 				04D486F328ABDAC000EC2D7B /* DefaultDataTransferService.swift in Sources */,
+				04BDA3ED299281880020EB58 /* DivisionDTO.swift in Sources */,
 				0415CCF32880143E008967F9 /* ViewModelType.swift in Sources */,
 				04F4A31C28D2BB230000FC61 /* DefaultIntroCoordinator.swift in Sources */,
+				04BDA3EF299281E60020EB58 /* RMDivision.swift in Sources */,
 				048667FD2841FF51004E7AAE /* AppDelegate.swift in Sources */,
 				04988F6C28ACAA930013D0CF /* NetworkConfigurable.swift in Sources */,
 				044E9F3428E6ED9A003461FB /* Observable+Extesion.swift in Sources */,

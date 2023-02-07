@@ -31,4 +31,10 @@ struct APIEndpoints {
                         method: .get,
                         headerParameters: ["If-None-Match": etag])
     }
+    
+    static func getDivisionEtag(etag: String) -> Endpoint<[DivisionDTO]> {
+        return Endpoint(path: "division.json",
+                        method: .get,
+                        headerParameters: ["If-None-Match": etag])
+    }
 }

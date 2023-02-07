@@ -14,4 +14,5 @@ protocol MetaInfoRepository {
     func fetchMatchTypeWithEtag() -> Observable<Void>
     func fetchSeasonIdWithEtag() -> Observable<Void>
     func fetchSPPositionWithEtag() -> Observable<Void>
+    func fetchDivisionWithEtag() -> Observable<Void>
 }
