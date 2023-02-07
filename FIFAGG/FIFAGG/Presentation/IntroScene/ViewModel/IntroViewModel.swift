@@ -49,6 +49,12 @@ struct IntroViewModel: ViewModelType {
                     print($0)
                 }
                 .disposed(by: disposedBag)
+                
+                let realmDivision = DefaultRealmStorage<DivisionDTO>(configuration: Realm.Configuration())
+                realmDivision.queryAll().subscribe {
+                    print($0)
+                }
+                .disposed(by: disposedBag)
             })
             .disposed(by: disposeBag)
 

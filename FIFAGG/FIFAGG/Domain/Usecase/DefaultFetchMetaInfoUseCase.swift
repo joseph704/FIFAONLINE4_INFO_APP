@@ -21,7 +21,8 @@ final class DefaultFetchMetaInfoUseCase: FetchMetaInfoUseCase {
             metaInfoRepository.fetchSpidWithEtag(),
             metaInfoRepository.fetchMatchTypeWithEtag(),
             metaInfoRepository.fetchSeasonIdWithEtag(),
-            metaInfoRepository.fetchSPPositionWithEtag()
+            metaInfoRepository.fetchSPPositionWithEtag(),
+            metaInfoRepository.fetchDivisionWithEtag()
         )
     }
 }
