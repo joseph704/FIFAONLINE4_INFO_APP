@@ -8,7 +8,6 @@
 import Foundation
 
 import RxSwift
-import Alamofire
 
 public enum NetworkResult {
     case success(data: Data?, isServerDataUpdated: Bool, etag: String)
