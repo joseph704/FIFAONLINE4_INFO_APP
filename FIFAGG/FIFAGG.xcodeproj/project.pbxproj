@@ -52,7 +52,6 @@
 		04F4A31C28D2BB230000FC61 /* DefaultIntroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4A31B28D2BB230000FC61 /* DefaultIntroCoordinator.swift */; };
 		04F4A32028D2BD7A0000FC61 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4A31F28D2BD7A0000FC61 /* Coordinator.swift */; };
 		04FEEAB428C8EE6100BF005E /* SpidDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FEEAB328C8EE6100BF005E /* SpidDTO.swift */; };
-		E45D6583A29175D4778E2605 /* Pods_FIFAGG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84054AE8F178BAD186DB82FD /* Pods_FIFAGG.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,9 +99,6 @@
 		04F4A31B28D2BB230000FC61 /* DefaultIntroCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultIntroCoordinator.swift; sourceTree = "<group>"; };
 		04F4A31F28D2BD7A0000FC61 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		04FEEAB328C8EE6100BF005E /* SpidDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpidDTO.swift; sourceTree = "<group>"; };
-		818B3EE41BB674EA2EEE5E86 /* Pods-FIFAGG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIFAGG.debug.xcconfig"; path = "Target Support Files/Pods-FIFAGG/Pods-FIFAGG.debug.xcconfig"; sourceTree = "<group>"; };
-		84054AE8F178BAD186DB82FD /* Pods_FIFAGG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIFAGG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		91CB6F709F7EFF08A4C2B5E1 /* Pods-FIFAGG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIFAGG.release.xcconfig"; path = "Target Support Files/Pods-FIFAGG/Pods-FIFAGG.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +109,6 @@
 				04988F7F28ACEFFA0013D0CF /* RealmSwift in Frameworks */,
 				04988F7D28ACEFFA0013D0CF /* Realm in Frameworks */,
 				04C3283928EC8210006A47D7 /* RxRealm in Frameworks */,
-				E45D6583A29175D4778E2605 /* Pods_FIFAGG.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +251,6 @@
 			children = (
 				048667FB2841FF51004E7AAE /* FIFAGG */,
 				048667FA2841FF51004E7AAE /* Products */,
-				201121FCB75B15369A850451 /* Pods */,
-				246AC114B457C0AC6AFFCD53 /* Frameworks */,
 				04E6F7D62986B9E600EAC695 /* Recovered References */,
 			);
 			sourceTree = "<group>";
@@ -468,23 +461,6 @@
 			path = DataMapping;
 			sourceTree = "<group>";
 		};
-		201121FCB75B15369A850451 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				818B3EE41BB674EA2EEE5E86 /* Pods-FIFAGG.debug.xcconfig */,
-				91CB6F709F7EFF08A4C2B5E1 /* Pods-FIFAGG.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		246AC114B457C0AC6AFFCD53 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				84054AE8F178BAD186DB82FD /* Pods_FIFAGG.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -492,11 +468,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0486680D2841FF52004E7AAE /* Build configuration list for PBXNativeTarget "FIFAGG" */;
 			buildPhases = (
-				57E6A3C6A46E316CB85057A9 /* [CP] Check Pods Manifest.lock */,
 				048667F52841FF51004E7AAE /* Sources */,
 				048667F62841FF51004E7AAE /* Frameworks */,
 				048667F72841FF51004E7AAE /* Resources */,
-				A2283F229042C3B1330FAF8F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -560,48 +534,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		57E6A3C6A46E316CB85057A9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FIFAGG-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A2283F229042C3B1330FAF8F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FIFAGG/Pods-FIFAGG-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FIFAGG/Pods-FIFAGG-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FIFAGG/Pods-FIFAGG-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		048667F52841FF51004E7AAE /* Sources */ = {
@@ -783,7 +715,6 @@
 		};
 		0486680E2841FF52004E7AAE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 818B3EE41BB674EA2EEE5E86 /* Pods-FIFAGG.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -811,7 +742,6 @@
 		};
 		0486680F2841FF52004E7AAE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91CB6F709F7EFF08A4C2B5E1 /* Pods-FIFAGG.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
