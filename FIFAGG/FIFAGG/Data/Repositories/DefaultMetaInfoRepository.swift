@@ -87,7 +87,7 @@ extension DefaultMetaInfoRepository: MetaInfoRepository {
         return self.fetchMetaInfo(
             metaInfoRealmStorage: self.divisionRealmStorage,
             endpoint: endpoint,
-            userDefaultsKey: UserDefaultsKey.spPosition
+            userDefaultsKey: UserDefaultsKey.division
         )
     }
 }

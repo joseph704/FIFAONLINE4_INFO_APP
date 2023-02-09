@@ -118,6 +118,7 @@ extension Requestable {
         }
         urlRequest.httpMethod = method.rawValue
         urlRequest.allHTTPHeaderFields = allHeaders
+        urlRequest.cachePolicy = .reloadIgnoringCacheData
         return urlRequest
     }
     
