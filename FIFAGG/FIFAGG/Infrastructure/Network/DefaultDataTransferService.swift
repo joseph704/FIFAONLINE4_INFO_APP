@@ -82,7 +82,7 @@ extension DefaultDataTransferService: DataTransferService {
                         let result: Single<T> = self.decode(data: data, decoder: endpoint.responseDecoder)
                         return result.map { ($0, isServerDataUpdated, etag) }
                     } else {
-                        return Single<(response: T?, isServerDataUpdated: Bool, etag: String)>.just((nil, false, ""))
+                        return Single<(response: T?, isServerDataUpdated: Bool, etag: String)>.just((nil, false, etag))
                     }
                     
                 case .failure(let networkError):
