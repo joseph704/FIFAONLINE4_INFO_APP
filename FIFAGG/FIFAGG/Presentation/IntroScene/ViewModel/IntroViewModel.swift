@@ -26,35 +26,6 @@ struct IntroViewModel: ViewModelType {
                 print(error.localizedDescription)
             }, onCompleted: {
                 print("성공")
-                let realmSPID = DefaultRealmStorage<SpidDTO>(configuration: Realm.Configuration())
-                realmSPID.queryAll().subscribe {
-                    print($0)
-                }
-                .disposed(by: disposedBag)
-                
-                let realmMatchtype = DefaultRealmStorage<MatchtypeDTO>(configuration: Realm.Configuration())
-                realmMatchtype.queryAll().subscribe {
-                    print($0)
-                }
-                .disposed(by: disposedBag)
-                
-                let realmSeasonId = DefaultRealmStorage<SeasonIdDTO>(configuration: Realm.Configuration())
-                realmSeasonId.queryAll().subscribe {
-                    print($0)
-                }
-                .disposed(by: disposedBag)
-               
-                let realmSPPosition = DefaultRealmStorage<SPPostionDTO>(configuration: Realm.Configuration())
-                realmSPPosition.queryAll().subscribe {
-                    print($0)
-                }
-                .disposed(by: disposedBag)
-                
-                let realmDivision = DefaultRealmStorage<DivisionDTO>(configuration: Realm.Configuration())
-                realmDivision.queryAll().subscribe {
-                    print($0)
-                }
-                .disposed(by: disposedBag)
             })
             .disposed(by: disposeBag)
 
