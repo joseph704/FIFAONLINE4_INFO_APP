@@ -13,6 +13,11 @@
 		0415CCF32880143E008967F9 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415CCF22880143E008967F9 /* ViewModelType.swift */; };
 		04213A0B2869A9E600C50CFC /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04213A0A2869A9E600C50CFC /* IntroViewController.swift */; };
 		043181B628BFAE87000A81C5 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043181B528BFAE87000A81C5 /* APIEndpoints.swift */; };
+		043C8AE7299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C8AE6299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests.swift */; };
+		043C8AEF299A90CA000D12B5 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 043C8AEE299A90CA000D12B5 /* GoogleSignIn */; };
+		043C8AF0299A90F4000D12B5 /* GoogleLoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBB40129969B4A00AA46EB /* GoogleLoginError.swift */; };
+		043C8AF1299A90F6000D12B5 /* GoogleLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBB3FA299692FF00AA46EB /* GoogleLoginUseCase.swift */; };
+		043C8AF2299A90F8000D12B5 /* DefaultGoogleLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBB3FD2996934400AA46EB /* DefaultGoogleLoginUseCase.swift */; };
 		044532EB28E273BB00C0B08F /* RealmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044532EA28E273BB00C0B08F /* RealmStorage.swift */; };
 		044532ED28E273C400C0B08F /* DefaultRealmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044532EC28E273C400C0B08F /* DefaultRealmStorage.swift */; };
 		044E9F3428E6ED9A003461FB /* Observable+Extesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E9F3328E6ED9A003461FB /* Observable+Extesion.swift */; };
@@ -66,6 +71,16 @@
 		65190230299268BD00A02D95 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6519022F299268BD00A02D95 /* Alamofire */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		043C8AE8299A90BE000D12B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 048667F12841FF51004E7AAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 048667F82841FF51004E7AAE;
+			remoteInfo = FIFAGG;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0413455A28E2A9D70077D123 /* RMSpid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSpid.swift; sourceTree = "<group>"; };
 		0413455E28E2B6170077D123 /* Realm+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Extension.swift"; sourceTree = "<group>"; };
@@ -73,6 +88,8 @@
 		0415CCF22880143E008967F9 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		04213A0A2869A9E600C50CFC /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		043181B528BFAE87000A81C5 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		043C8AE4299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FIFAOnlineGGUseCaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		043C8AE6299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIFAOnlineGGUseCaseTests.swift; sourceTree = "<group>"; };
 		044532EA28E273BB00C0B08F /* RealmStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorage.swift; sourceTree = "<group>"; };
 		044532EC28E273C400C0B08F /* DefaultRealmStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRealmStorage.swift; sourceTree = "<group>"; };
 		044E9F3328E6ED9A003461FB /* Observable+Extesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Extesion.swift"; sourceTree = "<group>"; };
@@ -119,6 +136,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		043C8AE1299A90BE000D12B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				043C8AEF299A90CA000D12B5 /* GoogleSignIn in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		048667F62841FF51004E7AAE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,6 +245,21 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		043C8AE5299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				043C8AE6299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests.swift */,
+			);
+			path = FIFAOnlineGGUseCaseTests;
+			sourceTree = "<group>";
+		};
+		043C8AED299A90CA000D12B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		044532E628E2726200C0B08F /* Realm */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,8 +316,10 @@
 			isa = PBXGroup;
 			children = (
 				048667FB2841FF51004E7AAE /* FIFAGG */,
+				043C8AE5299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests */,
 				048667FA2841FF51004E7AAE /* Products */,
 				04E6F7D62986B9E600EAC695 /* Recovered References */,
+				043C8AED299A90CA000D12B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -285,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				048667F92841FF51004E7AAE /* FIFAGG.app */,
+				043C8AE4299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -525,6 +568,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		043C8AE3299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 043C8AEC299A90BE000D12B5 /* Build configuration list for PBXNativeTarget "FIFAOnlineGGUseCaseTests" */;
+			buildPhases = (
+				043C8AE0299A90BE000D12B5 /* Sources */,
+				043C8AE1299A90BE000D12B5 /* Frameworks */,
+				043C8AE2299A90BE000D12B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				043C8AE9299A90BE000D12B5 /* PBXTargetDependency */,
+			);
+			name = FIFAOnlineGGUseCaseTests;
+			packageProductDependencies = (
+				043C8AEE299A90CA000D12B5 /* GoogleSignIn */,
+			);
+			productName = FIFAOnlineGGUseCaseTests;
+			productReference = 043C8AE4299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		048667F82841FF51004E7AAE /* FIFAGG */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0486680D2841FF52004E7AAE /* Build configuration list for PBXNativeTarget "FIFAGG" */;
@@ -561,9 +625,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					043C8AE3299A90BE000D12B5 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 048667F82841FF51004E7AAE;
+					};
 					048667F82841FF51004E7AAE = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -592,11 +660,19 @@
 			projectRoot = "";
 			targets = (
 				048667F82841FF51004E7AAE /* FIFAGG */,
+				043C8AE3299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		043C8AE2299A90BE000D12B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		048667F72841FF51004E7AAE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -609,6 +685,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		043C8AE0299A90BE000D12B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				043C8AE7299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests.swift in Sources */,
+				043C8AF0299A90F4000D12B5 /* GoogleLoginError.swift in Sources */,
+				043C8AF2299A90F8000D12B5 /* DefaultGoogleLoginUseCase.swift in Sources */,
+				043C8AF1299A90F6000D12B5 /* GoogleLoginUseCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		048667F52841FF51004E7AAE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -663,6 +750,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		043C8AE9299A90BE000D12B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 048667F82841FF51004E7AAE /* FIFAGG */;
+			targetProxy = 043C8AE8299A90BE000D12B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		048668072841FF52004E7AAE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -675,6 +770,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		043C8AEA299A90BE000D12B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H7363DJ3PQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = big.brother95.FIFAOnlineGGUseCaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FIFAGG.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FIFAGG";
+			};
+			name = Debug;
+		};
+		043C8AEB299A90BE000D12B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H7363DJ3PQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = big.brother95.FIFAOnlineGGUseCaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FIFAGG.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FIFAGG";
+			};
+			name = Release;
+		};
 		0486680B2841FF52004E7AAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -848,6 +989,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		043C8AEC299A90BE000D12B5 /* Build configuration list for PBXNativeTarget "FIFAOnlineGGUseCaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				043C8AEA299A90BE000D12B5 /* Debug */,
+				043C8AEB299A90BE000D12B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		048667F42841FF51004E7AAE /* Build configuration list for PBXProject "FIFAGG" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -928,6 +1078,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		043C8AEE299A90CA000D12B5 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04624B372995E4490056F3BB /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
 		04624B382995E4490056F3BB /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 04624B372995E4490056F3BB /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
