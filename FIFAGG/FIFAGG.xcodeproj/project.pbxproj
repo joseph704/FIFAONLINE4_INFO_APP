@@ -54,6 +54,9 @@
 		04F4A31828D2BAFA0000FC61 /* IntroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4A31728D2BAFA0000FC61 /* IntroCoordinator.swift */; };
 		04F4A31C28D2BB230000FC61 /* DefaultIntroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4A31B28D2BB230000FC61 /* DefaultIntroCoordinator.swift */; };
 		04F4A32028D2BD7A0000FC61 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4A31F28D2BD7A0000FC61 /* Coordinator.swift */; };
+		04FBB3FB299692FF00AA46EB /* GoogleLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBB3FA299692FF00AA46EB /* GoogleLoginUseCase.swift */; };
+		04FBB3FE2996934400AA46EB /* DefaultGoogleLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBB3FD2996934400AA46EB /* DefaultGoogleLoginUseCase.swift */; };
+		04FBB40229969B4A00AA46EB /* GoogleLoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBB40129969B4A00AA46EB /* GoogleLoginError.swift */; };
 		04FEEAB428C8EE6100BF005E /* SpidDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FEEAB328C8EE6100BF005E /* SpidDTO.swift */; };
 		651902212992676600A02D95 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 651902202992676600A02D95 /* RxCocoa */; };
 		651902232992676600A02D95 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 651902222992676600A02D95 /* RxRelay */; };
@@ -109,6 +112,9 @@
 		04F4A31728D2BAFA0000FC61 /* IntroCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCoordinator.swift; sourceTree = "<group>"; };
 		04F4A31B28D2BB230000FC61 /* DefaultIntroCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultIntroCoordinator.swift; sourceTree = "<group>"; };
 		04F4A31F28D2BD7A0000FC61 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		04FBB3FA299692FF00AA46EB /* GoogleLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginUseCase.swift; sourceTree = "<group>"; };
+		04FBB3FD2996934400AA46EB /* DefaultGoogleLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultGoogleLoginUseCase.swift; sourceTree = "<group>"; };
+		04FBB40129969B4A00AA46EB /* GoogleLoginError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginError.swift; sourceTree = "<group>"; };
 		04FEEAB328C8EE6100BF005E /* SpidDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpidDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +142,7 @@
 		0413455C28E2B3200077D123 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				04FBB40029969B3800AA46EB /* Error */,
 				043181B428BFAD59000A81C5 /* Constant */,
 				0413455D28E2B3260077D123 /* Extension */,
 			);
@@ -404,8 +411,8 @@
 		04DA759528F70AF8005325E9 /* Usecase */ = {
 			isa = PBXGroup;
 			children = (
-				04DA759828F70B40005325E9 /* Protocol */,
-				04DA759B28F70B62005325E9 /* DefaultFetchMetaInfoUseCase.swift */,
+				04FBB3F92996929300AA46EB /* Intro */,
+				04FBB3FC2996931A00AA46EB /* Login */,
 			);
 			path = Usecase;
 			sourceTree = "<group>";
@@ -467,6 +474,40 @@
 				04A3987E28D998FF007D93B7 /* Delegation */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		04FBB3F92996929300AA46EB /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				04DA759828F70B40005325E9 /* Protocol */,
+				04DA759B28F70B62005325E9 /* DefaultFetchMetaInfoUseCase.swift */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		04FBB3FC2996931A00AA46EB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				04FBB3FF2996934D00AA46EB /* Protocol */,
+				04FBB3FD2996934400AA46EB /* DefaultGoogleLoginUseCase.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		04FBB3FF2996934D00AA46EB /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				04FBB3FA299692FF00AA46EB /* GoogleLoginUseCase.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		04FBB40029969B3800AA46EB /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				04FBB40129969B4A00AA46EB /* GoogleLoginError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 		04FEEAB528C8EE6600BF005E /* DataMapping */ = {
@@ -601,14 +642,17 @@
 				04DA759C28F70B62005325E9 /* DefaultFetchMetaInfoUseCase.swift in Sources */,
 				04D486ED28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift in Sources */,
 				0413455F28E2B6170077D123 /* Realm+Extension.swift in Sources */,
+				04FBB40229969B4A00AA46EB /* GoogleLoginError.swift in Sources */,
 				044532EB28E273BB00C0B08F /* RealmStorage.swift in Sources */,
 				04F4A32028D2BD7A0000FC61 /* Coordinator.swift in Sources */,
 				045A2F1A28AB836A00A0E79B /* NetworkService.swift in Sources */,
 				04DC8A37287D89A1006B7AA9 /* IntroViewModel.swift in Sources */,
 				047D8FC629879DAB0007CA24 /* SeasonIdDTO.swift in Sources */,
+				04FBB3FB299692FF00AA46EB /* GoogleLoginUseCase.swift in Sources */,
 				045046042986A180005CD24F /* MatchtypeDTO.swift in Sources */,
 				04D486EF28ABC90700EC2D7B /* NetworkSessionManager.swift in Sources */,
 				04D486F128ABD98000EC2D7B /* DataTransferService.swift in Sources */,
+				04FBB3FE2996934400AA46EB /* DefaultGoogleLoginUseCase.swift in Sources */,
 				04C6F50129896658003D9268 /* SPPostionDTO.swift in Sources */,
 				0413456628E2C9CA0077D123 /* RealmRepresentable.swift in Sources */,
 				04DA759A28F70B55005325E9 /* FetchMetaInfoUseCase.swift in Sources */,
