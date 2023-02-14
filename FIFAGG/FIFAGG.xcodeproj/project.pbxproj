@@ -13,7 +13,7 @@
 		0415CCF32880143E008967F9 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415CCF22880143E008967F9 /* ViewModelType.swift */; };
 		04213A0B2869A9E600C50CFC /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04213A0A2869A9E600C50CFC /* IntroViewController.swift */; };
 		043181B628BFAE87000A81C5 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043181B528BFAE87000A81C5 /* APIEndpoints.swift */; };
-		043C8AE7299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C8AE6299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests.swift */; };
+		043C8AE7299A90BE000D12B5 /* FIFAOnlineGGLoginUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C8AE6299A90BE000D12B5 /* FIFAOnlineGGLoginUseCaseTests.swift */; };
 		043C8AEF299A90CA000D12B5 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 043C8AEE299A90CA000D12B5 /* GoogleSignIn */; };
 		043C8AF0299A90F4000D12B5 /* GoogleLoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBB40129969B4A00AA46EB /* GoogleLoginError.swift */; };
 		043C8AF1299A90F6000D12B5 /* GoogleLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBB3FA299692FF00AA46EB /* GoogleLoginUseCase.swift */; };
@@ -43,6 +43,12 @@
 		04A3987D28D998CA007D93B7 /* CoordinatorFinishDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3987C28D998CA007D93B7 /* CoordinatorFinishDelegate.swift */; };
 		04A3988028D99924007D93B7 /* DefaultAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3987F28D99924007D93B7 /* DefaultAppCoordinator.swift */; };
 		04A3988428D99E06007D93B7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3988328D99E06007D93B7 /* AppCoordinator.swift */; };
+		04B477A6299BB05F0048D950 /* AppleLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B477A5299BB05F0048D950 /* AppleLoginUseCase.swift */; };
+		04B477A8299BB0760048D950 /* DefaultAppleLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B477A7299BB0760048D950 /* DefaultAppleLoginUseCase.swift */; };
+		04B477A9299BBD4C0048D950 /* AppleLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B477A5299BB05F0048D950 /* AppleLoginUseCase.swift */; };
+		04B477AA299BBD4D0048D950 /* DefaultAppleLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B477A7299BB0760048D950 /* DefaultAppleLoginUseCase.swift */; };
+		04B477B1299BC23E0048D950 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 04B477B0299BC23E0048D950 /* RxCocoa */; };
+		04B477B3299BC2450048D950 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 04B477B2299BC2450048D950 /* RxSwift */; };
 		04BDA3ED299281880020EB58 /* DivisionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDA3EC299281880020EB58 /* DivisionDTO.swift */; };
 		04BDA3EF299281E60020EB58 /* RMDivision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDA3EE299281E60020EB58 /* RMDivision.swift */; };
 		04C3283928EC8210006A47D7 /* RxRealm in Frameworks */ = {isa = PBXBuildFile; productRef = 04C3283828EC8210006A47D7 /* RxRealm */; };
@@ -81,6 +87,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		04B477AF299BC19D0048D950 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0413455A28E2A9D70077D123 /* RMSpid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSpid.swift; sourceTree = "<group>"; };
 		0413455E28E2B6170077D123 /* Realm+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Extension.swift"; sourceTree = "<group>"; };
@@ -89,7 +108,7 @@
 		04213A0A2869A9E600C50CFC /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		043181B528BFAE87000A81C5 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		043C8AE4299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FIFAOnlineGGUseCaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		043C8AE6299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIFAOnlineGGUseCaseTests.swift; sourceTree = "<group>"; };
+		043C8AE6299A90BE000D12B5 /* FIFAOnlineGGLoginUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIFAOnlineGGLoginUseCaseTests.swift; sourceTree = "<group>"; };
 		044532EA28E273BB00C0B08F /* RealmStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorage.swift; sourceTree = "<group>"; };
 		044532EC28E273C400C0B08F /* DefaultRealmStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRealmStorage.swift; sourceTree = "<group>"; };
 		044E9F3328E6ED9A003461FB /* Observable+Extesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Extesion.swift"; sourceTree = "<group>"; };
@@ -115,6 +134,9 @@
 		04A3987C28D998CA007D93B7 /* CoordinatorFinishDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFinishDelegate.swift; sourceTree = "<group>"; };
 		04A3987F28D99924007D93B7 /* DefaultAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAppCoordinator.swift; sourceTree = "<group>"; };
 		04A3988328D99E06007D93B7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		04B477A4299B7F560048D950 /* FIFAGG.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FIFAGG.entitlements; sourceTree = "<group>"; };
+		04B477A5299BB05F0048D950 /* AppleLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginUseCase.swift; sourceTree = "<group>"; };
+		04B477A7299BB0760048D950 /* DefaultAppleLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAppleLoginUseCase.swift; sourceTree = "<group>"; };
 		04BDA3EC299281880020EB58 /* DivisionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionDTO.swift; sourceTree = "<group>"; };
 		04BDA3EE299281E60020EB58 /* RMDivision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMDivision.swift; sourceTree = "<group>"; };
 		04C6F50029896658003D9268 /* SPPostionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPPostionDTO.swift; sourceTree = "<group>"; };
@@ -140,6 +162,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B477B3299BC2450048D950 /* RxSwift in Frameworks */,
+				04B477B1299BC23E0048D950 /* RxCocoa in Frameworks */,
 				043C8AEF299A90CA000D12B5 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,7 +272,7 @@
 		043C8AE5299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests */ = {
 			isa = PBXGroup;
 			children = (
-				043C8AE6299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests.swift */,
+				043C8AE6299A90BE000D12B5 /* FIFAOnlineGGLoginUseCaseTests.swift */,
 			);
 			path = FIFAOnlineGGUseCaseTests;
 			sourceTree = "<group>";
@@ -408,6 +432,7 @@
 		04A7BAD828C86B0D00159C1B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04B477A4299B7F560048D950 /* FIFAGG.entitlements */,
 				048668052841FF52004E7AAE /* Assets.xcassets */,
 				048668072841FF52004E7AAE /* LaunchScreen.storyboard */,
 				0486680A2841FF52004E7AAE /* Info.plist */,
@@ -533,6 +558,7 @@
 			children = (
 				04FBB3FF2996934D00AA46EB /* Protocol */,
 				04FBB3FD2996934400AA46EB /* DefaultGoogleLoginUseCase.swift */,
+				04B477A7299BB0760048D950 /* DefaultAppleLoginUseCase.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -541,6 +567,7 @@
 			isa = PBXGroup;
 			children = (
 				04FBB3FA299692FF00AA46EB /* GoogleLoginUseCase.swift */,
+				04B477A5299BB05F0048D950 /* AppleLoginUseCase.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -584,6 +611,8 @@
 			name = FIFAOnlineGGUseCaseTests;
 			packageProductDependencies = (
 				043C8AEE299A90CA000D12B5 /* GoogleSignIn */,
+				04B477B0299BC23E0048D950 /* RxCocoa */,
+				04B477B2299BC2450048D950 /* RxSwift */,
 			);
 			productName = FIFAOnlineGGUseCaseTests;
 			productReference = 043C8AE4299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests.xctest */;
@@ -596,6 +625,7 @@
 				048667F52841FF51004E7AAE /* Sources */,
 				048667F62841FF51004E7AAE /* Frameworks */,
 				048667F72841FF51004E7AAE /* Resources */,
+				04B477AF299BC19D0048D950 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -689,7 +719,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				043C8AE7299A90BE000D12B5 /* FIFAOnlineGGUseCaseTests.swift in Sources */,
+				04B477AA299BBD4D0048D950 /* DefaultAppleLoginUseCase.swift in Sources */,
+				043C8AE7299A90BE000D12B5 /* FIFAOnlineGGLoginUseCaseTests.swift in Sources */,
+				04B477A9299BBD4C0048D950 /* AppleLoginUseCase.swift in Sources */,
 				043C8AF0299A90F4000D12B5 /* GoogleLoginError.swift in Sources */,
 				043C8AF2299A90F8000D12B5 /* DefaultGoogleLoginUseCase.swift in Sources */,
 				043C8AF1299A90F6000D12B5 /* GoogleLoginUseCase.swift in Sources */,
@@ -700,6 +732,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B477A8299BB0760048D950 /* DefaultAppleLoginUseCase.swift in Sources */,
 				045A2F1E28AB848100A0E79B /* ApiDataNetworkConfig.swift in Sources */,
 				045A2F1C28AB841B00A0E79B /* EndPoint.swift in Sources */,
 				04C6F503298966CC003D9268 /* RMSPPostion.swift in Sources */,
@@ -726,6 +759,7 @@
 				044E9F3628E6EDD7003461FB /* RealmResponseType.swift in Sources */,
 				04988F8328ADD3DD0013D0CF /* MetaInfoRepository.swift in Sources */,
 				047D8FC829879F480007CA24 /* RMSeasonId.swift in Sources */,
+				04B477A6299BB05F0048D950 /* AppleLoginUseCase.swift in Sources */,
 				04DA759C28F70B62005325E9 /* DefaultFetchMetaInfoUseCase.swift in Sources */,
 				04D486ED28ABC88600EC2D7B /* DefaultNetworkSessionManager.swift in Sources */,
 				0413455F28E2B6170077D123 /* Realm+Extension.swift in Sources */,
@@ -937,6 +971,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FIFAGG/Resources/FIFAGG.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H7363DJ3PQ;
@@ -964,6 +999,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FIFAGG/Resources/FIFAGG.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -1097,6 +1133,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 04988F7B28ACEFF90013D0CF /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		04B477B0299BC23E0048D950 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6519021F2992676600A02D95 /* XCRemoteSwiftPackageReference "rxswift" */;
+			productName = RxCocoa;
+		};
+		04B477B2299BC2450048D950 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6519021F2992676600A02D95 /* XCRemoteSwiftPackageReference "rxswift" */;
+			productName = RxSwift;
 		};
 		04C3283828EC8210006A47D7 /* RxRealm */ = {
 			isa = XCSwiftPackageProductDependency;
