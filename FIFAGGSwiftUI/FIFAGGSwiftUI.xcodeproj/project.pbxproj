@@ -18,6 +18,8 @@
 		65080E062A725A91000750C9 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 65080E052A725A91000750C9 /* Moya */; };
 		65080E092A725BBF000750C9 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 65080E082A725BBF000750C9 /* Realm */; };
 		65080E0B2A725BBF000750C9 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 65080E0A2A725BBF000750C9 /* RealmSwift */; };
+		65080E0D2A73A4D7000750C9 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65080E0C2A73A4D7000750C9 /* NetworkAPI.swift */; };
+		65080E0F2A775D43000750C9 /* APIKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65080E0E2A775D43000750C9 /* APIKey.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		65080DDA2A725656000750C9 /* FIFAGGSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FIFAGGSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65080DDE2A725656000750C9 /* FIFAGGSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIFAGGSwiftUIUITests.swift; sourceTree = "<group>"; };
 		65080DE02A725656000750C9 /* FIFAGGSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIFAGGSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		65080E0C2A73A4D7000750C9 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
+		65080E0E2A775D43000750C9 /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,8 @@
 		65080DEF2A725721000750C9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				65080E0C2A73A4D7000750C9 /* NetworkAPI.swift */,
+				65080E0E2A775D43000750C9 /* APIKey.plist */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -321,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65080E0F2A775D43000750C9 /* APIKey.plist in Resources */,
 				65080DCB2A725656000750C9 /* Preview Assets.xcassets in Resources */,
 				65080DC82A725656000750C9 /* Assets.xcassets in Resources */,
 			);
@@ -349,6 +356,7 @@
 			files = (
 				65080DC62A725655000750C9 /* ContentView.swift in Sources */,
 				65080DC42A725655000750C9 /* FIFAGGSwiftUIApp.swift in Sources */,
+				65080E0D2A73A4D7000750C9 /* NetworkAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
